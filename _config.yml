@@ -1,7 +1,7 @@
 # Site settings
 title: Scaxlibur Blog
 SEOTitle: Scaxlibur的博客 | Scaxlibur Blog
-header-img: img/background.jpg
+header-img: img/background.jpeg
 email: scaxlibur@gmail.com
 description: "负箧曳屣，行深山巨谷中。"
 keyword: "Scaxlibur, Scaxlibur Blog, Scaxlibur的博客, ESP32"
@@ -97,8 +97,8 @@ service-worker: true
 
 
 # Friends
-friends: [
-    {
+#friends: [
+#    {
     #    title: "WY",
     #    href: "http://zhengwuyang.com"
     # },{
@@ -110,5 +110,5 @@ friends: [
    # },{
    #     title: "Apple Developer",
    #     href: "https://developer.apple.com/"
-    }
-]
+#    }
+#]
