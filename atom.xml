@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://newzone.top/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://scaxlibur.github.io/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://newzone.top/</id>
+  <id>https://scaxlibur.github.io/</id>
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
-  <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-11-05T11:50:14.691Z</updated>
+  <icon>https://scaxlibur.github.io/favicon.ico</icon>
+  <updated>2024-11-05T12:00:19.440Z</updated>
   <generator>@vuepress/plugin-feed</generator>
-  <link rel="self" href="https://newzone.top/atom.xml"/>
-  <link rel="alternate" href="https://newzone.top/"/>
+  <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
+  <link rel="alternate" href="https://scaxlibur.github.io/"/>
   <category term="ESP32"/>
   <category term="嵌入式开发"/>
   <category term="面向对象的程序设计"/>
   <category term="物联网"/>
   <entry>
     <title type="text">C++嵌入式开发入门</title>
-    <id>https://newzone.top/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
-    <link href="https://newzone.top/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
+    <id>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
+    <link href="https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
     <updated>2024-11-05T11:30:24.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
@@ -166,8 +166,8 @@
   </entry>
   <entry>
     <title type="text">总线舵机</title>
-    <id>https://newzone.top/posts/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</id>
-    <link href="https://newzone.top/posts/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html"/>
+    <id>https://scaxlibur.github.io/posts/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</id>
+    <link href="https://scaxlibur.github.io/posts/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html"/>
     <updated>2024-11-05T11:30:24.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>总线舵机是一种利用UART总线进行控制的舵机。笔者购买的总线舵机使用单线UART总线，即TX与RX在同一条线上。有的文章指出这样的设计会产生冲突，但笔者猜测如果总线上只有总线舵机，干扰可以通过软件方法解决。</p>
@@ -367,8 +367,8 @@
   </entry>
   <entry>
     <title type="text">ESP32计时器</title>
-    <id>https://newzone.top/posts/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</id>
-    <link href="https://newzone.top/posts/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html"/>
+    <id>https://scaxlibur.github.io/posts/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</id>
+    <link href="https://scaxlibur.github.io/posts/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html"/>
     <updated>2024-11-05T11:30:24.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>ESP-IDF利用结构体进行各种配置，计时器的配置是一个典型案例。</p>
