@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://newzone.top/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
   <id>https://newzone.top/</id>
-  <title>LearnData 开源笔记</title>
-  <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
+  <title>Scaxlibur 博客</title>
+  <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-11-05T11:31:39.866Z</updated>
+  <updated>2024-11-05T11:50:14.691Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -12,8 +12,6 @@
   <category term="嵌入式开发"/>
   <category term="面向对象的程序设计"/>
   <category term="物联网"/>
-  <category term="工具"/>
-  <category term="使用指南"/>
   <entry>
     <title type="text">C++嵌入式开发入门</title>
     <id>https://newzone.top/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
@@ -483,29 +481,5 @@
     <category term="ESP32"/>
     <category term="嵌入式开发"/>
     <published>2024-10-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">博客文章样例 2</title>
-    <id>https://newzone.top/posts/2024-03-02-blog_example2.html</id>
-    <link href="https://newzone.top/posts/2024-03-02-blog_example2.html"/>
-    <updated>2024-11-05T11:03:40.000Z</updated>
-    <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></content>
-    <category term="工具"/>
-    <published>2024-03-02T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">博客文章样例</title>
-    <id>https://newzone.top/posts/2024-03-01-blog_example.html</id>
-    <link href="https://newzone.top/posts/2024-03-01-blog_example.html"/>
-    <updated>2024-11-05T11:03:40.000Z</updated>
-    <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></content>
-    <category term="使用指南"/>
-    <published>2024-03-01T00:00:00.000Z</published>
   </entry>
 </feed>
