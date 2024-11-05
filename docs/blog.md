@@ -7,7 +7,7 @@ title: Scaxlibur的博客
 #heroImage: /logo.svg
 heroText: Scaxlibur
 tagline: 负箧曳屣，行深山巨谷中。
-bgImage: https://img.newzone.top/home-bg-1.jpg
+bgImage: /background.jpeg
 heroFullScreen: false
 #projects:
 #  - icon: project

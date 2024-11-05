@@ -52,7 +52,7 @@ export default sidebar({
           children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
         },
       ],
-    },*/
+    },
     {
       text: "🔡 代码编程",
       icon: "",
@@ -81,6 +81,7 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    */
     {
       text: "博客文章",
       icon: "fa6-solid:feather-pointed",
