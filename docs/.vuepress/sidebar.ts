@@ -4,8 +4,6 @@ import { sidebar } from "vuepress-theme-hope";
 // https://fontawesome.com/search?m=free&o=r
 export default sidebar({
   "": [
-    "/DailyRoutine",
-    "/Fitness",
     // 读书笔记架构更换到 docsify，不能使用相对链接
     { text: "读书笔记", icon: "fa6-brands:readme", link: "https://scaxlibur.github.io/reading/" },
     // 指定显示页面
