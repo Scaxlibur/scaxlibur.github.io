@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-06T12:02:44.950Z</updated>
+  <updated>2024-11-06T12:07:19.493Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -14,9 +14,9 @@
   <category term="物联网"/>
   <entry>
     <title type="text">FreeRTOS</title>
-    <id>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/freeRTOS/</id>
-    <link href="https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/freeRTOS/"/>
-    <updated>2024-11-06T12:01:19.000Z</updated>
+    <id>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html</id>
+    <link href="https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html"/>
+    <updated>2024-11-06T12:05:40.000Z</updated>
     <summary type="html"><![CDATA[<h2>FreeRTOS简介</h2>
 <h3>1.什么是FreeRTOS？</h3>
 <p>FreeRTOS是一个热门的嵌入式设备用即时操作系统核心，它于2003年由Richard Barry设计，并已被经成功移植到35种不同的微控制器上。</p>
@@ -38,7 +38,7 @@
 <p>随着物联网的发展，未来的嵌入式产品必然更为复杂、连接性更强以及需要更丰富的用户界面。当处理这些任务时，一个好的RTOS就变得不可缺少了。</p>
 <p>书到用时方恨少，我希望自己永远不会有这种感觉。</p>
 <h3>参考</h3>
-<p>1.<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/v5.3.1/esp32s3/api-reference/system/Freertos.html" target="_blank" rel="noopener noreferrer">ESP-IDF FreeRTOS概述</a></p>
+<p>1.<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/v5.3.1/esp32s3/api-reference/system/freertos.html" target="_blank" rel="noopener noreferrer">ESP-IDF FreeRTOS概述</a></p>
 ]]></content>
     <category term="ESP32"/>
     <category term="嵌入式开发"/>

@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Nov 2024 12:02:44 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Nov 2024 12:02:44 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Nov 2024 12:07:19 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Nov 2024 12:07:19 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>ESP32</category>
@@ -16,8 +16,8 @@
     <category>物联网</category>
     <item>
       <title>FreeRTOS</title>
-      <link>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/freeRTOS/</link>
-      <guid>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/freeRTOS/</guid>
+      <link>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html</link>
+      <guid>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">FreeRTOS</source>
       <description>FreeRTOS简介 1.什么是FreeRTOS？ FreeRTOS是一个热门的嵌入式设备用即时操作系统核心，它于2003年由Richard Barry设计，并已被经成功移植到35种不同的微控制器上。 ESP32系列中的FreeRTOS和原始FreeRTOS有所不同。原始FreeRTOS是一款小巧高效的实时操作系统，适用于许多单核MCU和SoC。但为了...</description>
       <category>ESP32</category>
@@ -39,7 +39,7 @@
 <p>随着物联网的发展，未来的嵌入式产品必然更为复杂、连接性更强以及需要更丰富的用户界面。当处理这些任务时，一个好的RTOS就变得不可缺少了。</p>
 <p>书到用时方恨少，我希望自己永远不会有这种感觉。</p>
 <h3>参考</h3>
-<p>1.<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/v5.3.1/esp32s3/api-reference/system/Freertos.html" target="_blank" rel="noopener noreferrer">ESP-IDF FreeRTOS概述</a></p>
+<p>1.<a href="https://docs.espressif.com/projects/esp-idf/zh_CN/v5.3.1/esp32s3/api-reference/system/freertos.html" target="_blank" rel="noopener noreferrer">ESP-IDF FreeRTOS概述</a></p>
 ]]></content:encoded>
     </item>
     <item>
