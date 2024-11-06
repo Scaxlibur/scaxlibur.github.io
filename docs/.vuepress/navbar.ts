@@ -31,12 +31,7 @@ export default navbar([
       },
     ],
   },
-  {
-    text: "生活",
-    icon: "fa6-solid:bed-pulse",
-    prefix: "/family/",
-    children: ["Diet", "Coupon"],
-  },
+  */
   {
     text: "工具",
     icon: "fa6-solid:toolbox",
@@ -54,5 +49,5 @@ export default navbar([
         link: "https://nav.newzone.top/",
       },
     ],
-  },*/
+  },
 ]);

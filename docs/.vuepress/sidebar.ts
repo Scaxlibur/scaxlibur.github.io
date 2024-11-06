@@ -33,10 +33,11 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    */
     {
       text: "🏗️ 网站部署",
       icon: "",
-      prefix: "/deploy/",
+      prefix: "/网站部署/",
       link: "",
       collapsible: true,
       children: [
@@ -52,43 +53,14 @@ export default sidebar({
       ],
     },
     {
-      text: "🔡 代码编程",
-      icon: "",
-      prefix: "/code/",
-      collapsible: true,
-      children: [
-        "README.md",
-        {
-          text: "Basic",
-          icon: "fa6-solid:cube",
-          collapsible: true,
-          children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
-        },
-        {
-          text: "FrondEnd",
-          icon: "fa6-solid:object-group",
-          collapsible: true,
-          children: ["Vue.md", "HTML.md", "Javascript.md", "Python.md"],
-        },
-      ],
-    },
-    {
-      text: "🛖 生活记录",
-      icon: "",
-      prefix: "/family/",
-      collapsible: true,
-      children: "structure",
-    },
-    */
-    {
-      text: "嵌入式开发",
+      text: "🔡 嵌入式开发",
       icon: "",
       prefix: "/嵌入式开发/",
       collapsible: true,
       children: "structure",
     },
     {
-      text: "博客文章",
+      text: "🗒️ 博客文章",
       icon: "fa6-solid:feather-pointed",
       prefix: "/_posts/",
       link: "/blog",
