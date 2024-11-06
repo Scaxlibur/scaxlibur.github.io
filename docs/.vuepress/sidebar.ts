@@ -61,7 +61,7 @@ export default sidebar({
     },
     {
       text: "🗒️ 博客文章",
-      icon: "fa6-solid:feather-pointed",
+      icon: "",
       prefix: "/_posts/",
       link: "/blog",
       collapsible: true,
