@@ -81,9 +81,9 @@ export default sidebar({
     },
     */
     {
-      text: "🤖 ESP32",
+      text: "嵌入式开发",
       icon: "",
-      prefix: "/ESP32/",
+      prefix: "/嵌入式开发/",
       collapsible: true,
       children: "structure",
     },
