@@ -85,7 +85,22 @@ export default sidebar({
       icon: "",
       prefix: "/嵌入式开发/",
       collapsible: true,
-      children: "structure",
+      children: [
+        {
+          text: "ESP32",
+          icon: "fa6-solid:code-compare",
+          prefix: "/嵌入式开发/ESP32",
+          collapsible: true,
+          children: "structure",
+        },
+        {
+          text: "FreeRTOS",
+          icon: "fa6-solid:code-compare",
+          prefix: "/嵌入式开发/freeRTOS",
+          collapsible: true,
+          children: "structure",
+        },
+      ]
     },
     {
       text: "博客文章",
