@@ -81,6 +81,13 @@ export default sidebar({
     },
     */
     {
+      text: "🤖 ESP32",
+      icon: "",
+      prefix: "/ESP32/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "博客文章",
       icon: "fa6-solid:feather-pointed",
       prefix: "/_posts/",
