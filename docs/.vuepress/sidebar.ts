@@ -89,14 +89,14 @@ export default sidebar({
         {
           text: "ESP32",
           icon: "fa6-solid:code-compare",
-          prefix: "/ESP32/",
+          prefix: "/嵌入式开发/ESP32/",
           collapsible: true,
           children: "structure",
         },
         {
           text: "FreeRTOS",
           icon: "fa6-solid:code-compare",
-          prefix: "/freeRTOS/",
+          prefix: "/嵌入式开发/freeRTOS/",
           collapsible: true,
           children: "structure",
         },
