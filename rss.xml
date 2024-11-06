@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Nov 2024 06:27:24 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Nov 2024 06:27:24 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Nov 2024 06:29:39 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Nov 2024 06:29:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>ESP32</category>
@@ -165,8 +165,8 @@
     </item>
     <item>
       <title>总线舵机</title>
-      <link>https://scaxlibur.github.io/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</link>
-      <guid>https://scaxlibur.github.io/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</guid>
+      <link>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</link>
+      <guid>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">总线舵机</source>
       <description>前言 总线舵机是一种利用UART总线进行控制的舵机。笔者购买的总线舵机使用单线UART总线，即TX与RX在同一条线上。有的文章指出这样的设计会产生冲突，但笔者猜测如果总线上只有总线舵机，干扰可以通过软件方法解决。 本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1 本文的例子来源于基于ESP32-S3的高安全性宿舍智能门锁设计 正文 UA...</description>
       <category>ESP32</category>
@@ -362,8 +362,8 @@
     </item>
     <item>
       <title>ESP32计时器</title>
-      <link>https://scaxlibur.github.io/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</link>
-      <guid>https://scaxlibur.github.io/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</guid>
+      <link>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</link>
+      <guid>https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">ESP32计时器</source>
       <description>前言 ESP-IDF利用结构体进行各种配置，计时器的配置是一个典型案例。 正文 写在前面 计时器的定义本文不再赘述。本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1 ESP32-S3的计时器从无到有共三种状态，即：init -&amp;gt; enable -&amp;gt; run 计时器通常在以下场景中使用： 如同挂钟一般自由运行，随时随地获取高分辨率时间戳；...</description>
       <category>ESP32</category>
