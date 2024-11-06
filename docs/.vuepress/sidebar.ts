@@ -89,14 +89,14 @@ export default sidebar({
         {
           text: "ESP32",
           icon: "fa6-solid:code-compare",
-          prefix: "/ESP32",
+          prefix: "/ESP32/",
           collapsible: true,
           children: "structure",
         },
         {
           text: "FreeRTOS",
           icon: "fa6-solid:code-compare",
-          prefix: "/freeRTOS",
+          prefix: "/freeRTOS/",
           collapsible: true,
           children: "structure",
         },
