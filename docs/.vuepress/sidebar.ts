@@ -74,8 +74,8 @@ export default sidebar({
           collapsible: true,
           children: ["design.md"],
         },
-        */
-      ],
+        
+      ],*/
     },
   ],
   // 专题区（独立侧边栏）
