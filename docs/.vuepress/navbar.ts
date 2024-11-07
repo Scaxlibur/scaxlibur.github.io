@@ -5,18 +5,18 @@ import { navbar } from "vuepress-theme-hope";
 // 专题话题的路径需在尾部添加 /，否则有可能出现链接错误。比如下方「生活」中的 baby/
 export default navbar([
   { text: "博客", icon: "fa6-solid:blog", link: "/blog" },
-  /*
   {
-    text: "应用",
+    text: "折腾",
     icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
-      "apps/Applist",
+      "/NAS、服务器和软路由",
       {
-        text: "常用扩展",
+        text: "NAS",
         icon: "fa6-brands:chrome",
-        link: "apps/Chrome",
+        link: "NAS、服务器和软路由/NAS",
       },
+      /*
       {
         text: "服务/专题",
         icon: "",
@@ -29,9 +29,10 @@ export default navbar([
           },
         ],
       },
+      */
     ],
   },
-  */
+
   {
     text: "工具",
     icon: "fa6-solid:toolbox",
@@ -43,11 +44,6 @@ export default navbar([
       },
       { text: "IMGPrompt", icon: "fa6-solid:image", link: "https://prompt.newzone.top/" },
       { text: "多语言翻译", icon: "fa6-solid:language", link: "https://tools.newzone.top/json-translate" },
-      {
-        text: "工具收藏",
-        icon: "fa6-solid:bars",
-        link: "https://nav.newzone.top/",
-      },
     ],
   },
 ]);
