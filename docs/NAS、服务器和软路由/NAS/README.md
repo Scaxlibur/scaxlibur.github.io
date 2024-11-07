@@ -9,6 +9,6 @@ icon: fa6-solid:icons
 
 <!-- markdownlint-disable MD033 -->
 
-<Catalog base='/NAS、服务器和软路由/NAS/' />
+<Catalog base='/NAS、服务器和软路由/' />
 
 <!-- markdownlint-enable MD033 -->
