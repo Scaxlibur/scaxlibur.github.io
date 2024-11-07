@@ -18,6 +18,18 @@ export default navbar([
       },
       /*
       {
+        text: "服务器",
+        icon: "fa6-brands:chrome",
+        link: "NAS、服务器和软路由/服务器/",
+      },
+      {
+        text: "软路由",
+        icon: "fa6-brands:chrome",
+        link: "NAS、服务器和软路由/软路由/",
+      },
+      */
+      /*
+      {
         text: "服务/专题",
         icon: "",
         prefix: "",
