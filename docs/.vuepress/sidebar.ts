@@ -66,7 +66,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       children: [
-        "README.md",
+        "structure",
         /*
         {
           text: "其他",
