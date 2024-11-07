@@ -52,5 +52,5 @@ export default sidebar({
     },
   ],
   // 专题区（独立侧边栏）
-  //"/NAS、服务器和软路由/NAS/": "structure",
+  "/NAS、服务器和软路由/NAS/": "structure",
 });
