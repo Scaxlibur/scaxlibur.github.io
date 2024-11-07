@@ -30,7 +30,7 @@ export default sidebar({
     {
       text: "🔡 嵌入式开发",
       icon: "",
-      prefix: "/嵌入式开发/",
+      prefix: "/EmbeddedDevelopment/",
       collapsible: true,
       children: "structure",
     },
