@@ -59,9 +59,27 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    {
+      text: "🧰 NAS、服务器和软路由",
+      icon: "",
+      prefix: "/NAS、服务器和软路由/",
+      link: "",
+      collapsible: true,
+      children: [
+        "README.md",
+        /*
+        {
+          text: "其他",
+          icon: "fa6-solid:code-compare",
+          collapsible: true,
+          children: ["design.md"],
+        },
+        */
+      ],
+    },
   ],
   // 专题区（独立侧边栏）
-  "/apps/topic/": "structure",
+  "/NAS、服务器和软路由/NAS/": "structure",
   // 如果你不想使用默认侧边栏，可以按照路径自行设置。但需要去掉下方配置中的注释，以避免博客和时间轴出现异常。_posts 目录可以不存在。
   /*"/_posts/": [
     {
