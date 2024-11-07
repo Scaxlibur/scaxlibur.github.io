@@ -4,52 +4,39 @@ https://moonvy.com/blog/post/2022/diffusion-accelerates-diffusion/#%E7%BB%98%E7%
 代码来源：https://theme-hope.vuejs.press/zh/config/style.html
 */
 
-// background
-$vp-c-bg: (
-  light: #00e4c5,
-  dark: #020231,
-) !default;
-$vp-c-bg-alt: (
-  light: #f6f6f7,
-  dark: #161618,
-) !default;
-$vp-c-bg-elv: (
-  light: #fff,
-  dark: #202127,
-) !default;
-
-// text
 $vp-c-text: (
   light: rgb(60 60 67),
-  dark: rgb(235 235 245 / 86%),
-) !default;
+  dark: rgb(235 235 245 / 70%),
+);
 
-// border
+$vp-navbar: (
+  light: #fff,
+  dark: #252232,
+);
+
+// content
+$vp-c-bg: (
+  light: #fff,
+  dark: #252232,
+);
+
+$vp-c-bg-alt: (
+  light: #f6f6f7,
+  dark: #2c293d,
+);
+
+$vp-c-bg-elv: (
+  light: #fff,
+  dark: #252232,
+);
+
+// 边框
 $vp-c-border: (
   light: #c2c2c4,
-  dark: #3c3f44,
-) !default;
+  dark: #302d28,
+);
+
 $vp-c-gutter: (
   light: #e2e2e3,
-  dark: #000,
-) !default;
-
-// shadow
-$vp-c-shadow: (
-  light: rgb(0 0 0 / 15%),
-  dark: rgb(0 0 0 / 30%),
-) !default;
-
-// control
-$vp-c-control: (
-  light: rgb(142 150 170 / 10%),
-  dark: rgb(101 117 133 / 12%),
-) !default;
-$vp-c-control-hover: (
-  light: rgb(142 150 170 / 16%),
-  dark: rgb(101 117 133 / 18%),
-) !default;
-$vp-c-control-disabled: (
-  light: #eaeaea,
-  dark: #363636,
-) !default;
+  dark: #191722,
+);
