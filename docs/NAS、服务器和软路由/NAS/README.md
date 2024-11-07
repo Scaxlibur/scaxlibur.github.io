@@ -1,13 +1,11 @@
 ---
 article: false
 index: false
-title: 专题示例
+title: NAS
 icon: fa6-solid:icons
 ---
 
-如果想形成专题文章，并想使用独立侧边栏，则参考本目录使用专题文章。
-
-注意修改 `.vuepress/sidebar.ts` 和下方目录的路径。
+这个分类里全是NAS相关的内容，主要是黑群晖。
 
 <!-- markdownlint-disable MD033 -->
 

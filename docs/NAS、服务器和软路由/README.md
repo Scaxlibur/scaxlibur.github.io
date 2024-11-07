@@ -1,13 +1,11 @@
 ---
 article: false
 index: false
-title: 专题示例
+title: NAS、服务器和软路由
 icon: fa6-solid:icons
 ---
 
-如果想形成专题文章，并想使用独立侧边栏，则参考本目录使用专题文章。
-
-注意修改 `.vuepress/sidebar.ts` 和下方目录的路径。
+这是笔者在捡垃圾历程中的一些小记录和小技巧。专心很重要，捡电子垃圾也要有所侧重。笔者涉猎的领域主要是NAS、服务器和软路由，在这条路上踩了不少坑，也积累了不少经验，或许记录下来会更好。
 
 <!-- markdownlint-disable MD033 -->
 
