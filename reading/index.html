@@ -204,7 +204,7 @@
       minutes - 0-59 之间的整数，做为 date 对象的分钟数
       seconds - 0-59 之间的整数，做为 date 对象的秒数
       microseconds - 0-999 之间的整数，做为 date 对象的毫秒数 */
-        var t1 = Date.UTC(2024, 10, 20, 11, 00, 00); //北京时间 2024-10-20 11:00:00 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
+        var t1 = Date.UTC(2024, 10, 20, 11, 0, 0); //北京时间 2024-10-20 11:00:00 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
