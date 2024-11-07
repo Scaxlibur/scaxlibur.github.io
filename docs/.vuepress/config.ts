@@ -30,7 +30,7 @@ export default defineUserConfig({
     // 谷歌分析
     googleAnalyticsPlugin({
       // 设置你的 Analytics ID
-      id: "G-RWKZTY2P9R",
+      id: "G-K4Z1ZNRHYS",
     }),
   ],
   bundler: webpackBundler({
