@@ -9,24 +9,6 @@ export default sidebar({
     // 指定显示页面
     /*
     {
-      text: "🧰 应用手册",
-      icon: "",
-      prefix: "/apps/",
-      link: "",
-      collapsible: true,
-      children: [
-        "Applist.md",
-        "toolbox.md",
-        {
-          text: "其他",
-          icon: "fa6-solid:code-compare",
-          collapsible: true,
-          children: ["design.md"],
-        },
-      ],
-    },
-    */
-    {
       text: "🏗️ 网站部署",
       icon: "",
       prefix: "/网站部署/",
@@ -44,6 +26,7 @@ export default sidebar({
         },
       ],
     },
+    */
     {
       text: "🔡 嵌入式开发",
       icon: "",
