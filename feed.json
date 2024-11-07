@@ -7,6 +7,19 @@
   "favicon": "https://scaxlibur.github.io/favicon.ico",
   "items": [
     {
+      "title": "有用的NAS用DockerIMG",
+      "url": "https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html",
+      "id": "https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html",
+      "summary": "为什么用Docker？ Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。 轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Dock...",
+      "content_html": "<h2>为什么用Docker？</h2>\n<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>\n<p>轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Docker，光是处理不同设备上的依赖项就是难以愉悦的鸿沟。</p>\n<p>笔者使用的是黑群晖S6400，所以接下来的介绍都是黑群晖平台上几乎开箱即用的DockerIMG。但是出于一些原因，有的DockersIMG我不能在此列出。</p>\n",
+      "date_published": "2024-11-07T00:00:00.000Z",
+      "date_modified": "2024-11-07T10:57:00.000Z",
+      "authors": [],
+      "tags": [
+        "NAS"
+      ]
+    },
+    {
       "title": "FreeRTOS",
       "url": "https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html",
       "id": "https://scaxlibur.github.io/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html",
