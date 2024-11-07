@@ -7,13 +7,13 @@
   "favicon": "https://scaxlibur.github.io/favicon.ico",
   "items": [
     {
-      "title": "有用的NAS用DockerIMG",
+      "title": "有用的Docker镜像",
       "url": "https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html",
       "id": "https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html",
       "summary": "为什么用Docker？ Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。 轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Dock...",
       "content_html": "<h2>为什么用Docker？</h2>\n<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>\n<p>轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Docker，光是处理不同设备上的依赖项就是难以愉悦的鸿沟。</p>\n<p>笔者使用的是黑群晖S6400，所以接下来的介绍都是黑群晖平台上几乎开箱即用的DockerIMG。但是出于一些原因，有的DockersIMG我不能在此列出。</p>\n<h2>影视服务器-Jellyfin</h2>\n<p><strong>搞NAS不搞影音等于白搞，搞影音不搞Jellyfin也是白搞。</strong> 这句话是彻头彻尾的暴论，但我的的确确不喜欢闭源的影视服务器。</p>\n<p>这里我推荐<a href=\"https://registry.hub.docker.com/r/nyanmisaka/jellyfin/\" target=\"_blank\" rel=\"noopener noreferrer\">nyanmisaka/jellyfin</a>, 这个映像支持硬解码，配置方面和其他版本的似乎没什么区别。</p>\n<p>但是jellyfin似乎一直有个BUG，就是在使用SUB字幕的时候，时间轴偶尔会对不上，需要自己手动调节。不知道现在修复没有，但是确实有点麻烦，因为每次打开节目都要调一下字幕的偏移量。中文的字幕还好，英文字幕就有点考验听力了，日语字幕基本上只能猜。</p>\n<h2>个人导航-heimdall</h2>\n<p>以前，我时常为折腾而烦恼————也不是因为别的，而是折腾出来的东西太多，而且全是以网站的形式呈现的。这种情况下就不得不开一个收藏夹，把自己做的东西收藏起来。但收藏夹毕竟不太美观，所以才有了heimdall这样的个人导航服务。</p>\n<p><a href=\"https://registry.hub.docker.com/r/linuxserver/heimdall/\" target=\"_blank\" rel=\"noopener noreferrer\">linuxserver/heimdall</a></p>\n<p>所谓个人导航，就是个人搭建的一种网络导航，有点像2345导航之类的，但放的全是自己的网站（当然也可以放其他网站，只是笔者需要整理自己折腾出来的东西）。</p>\n<p>简而言之，就是一个自己可以定制的导航主页。</p>\n",
       "date_published": "2024-11-07T00:00:00.000Z",
-      "date_modified": "2024-11-07T11:38:27.000Z",
+      "date_modified": "2024-11-07T13:58:34.000Z",
       "authors": [],
       "tags": [
         "NAS"

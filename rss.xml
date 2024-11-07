@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 07 Nov 2024 13:53:16 GMT</pubDate>
-    <lastBuildDate>Thu, 07 Nov 2024 13:53:16 GMT</lastBuildDate>
+    <pubDate>Thu, 07 Nov 2024 13:59:48 GMT</pubDate>
+    <lastBuildDate>Thu, 07 Nov 2024 13:59:48 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>NAS</category>
@@ -16,10 +16,10 @@
     <category>面向对象的程序设计</category>
     <category>物联网</category>
     <item>
-      <title>有用的NAS用DockerIMG</title>
+      <title>有用的Docker镜像</title>
       <link>https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html</link>
       <guid>https://scaxlibur.github.io/NAS%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E8%BD%AF%E8%B7%AF%E7%94%B1/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html</guid>
-      <source url="https://scaxlibur.github.io/rss.xml">有用的NAS用DockerIMG</source>
+      <source url="https://scaxlibur.github.io/rss.xml">有用的Docker镜像</source>
       <description>为什么用Docker？ Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。 轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Dock...</description>
       <category>NAS</category>
       <pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate>
