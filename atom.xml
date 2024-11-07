@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-07T06:18:31.095Z</updated>
+  <updated>2024-11-07T10:42:13.999Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -48,7 +48,7 @@
     <title type="text">C++嵌入式开发入门</title>
     <id>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
     <link href="https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
-    <updated>2024-11-06T11:07:42.000Z</updated>
+    <updated>2024-11-07T10:41:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
 <p>本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1</p>
@@ -63,7 +63,6 @@
 <p><strong>封装</strong>是面向对象编程中的把数据和操作数据的函数绑定在一起的一个概念，这样能避免受到外界的干扰和误用，从而确保了安全。</p>
 <p><strong>数据封装</strong>是一种把数据和操作数据的函数捆绑在一起的机制，<strong>数据抽象</strong>是一种仅向用户暴露接口而把具体的实现细节隐藏起来的机制。</p>
 <p>C++ 通过创建<strong>类</strong>来支持封装。类用于指定对象的形式，是一种用户自定义的数据类型，它是一种封装了数据和函数的组合。类中的数据称为成员变量，函数称为成员函数。类可以被看作是一种模板，可以用来创建具有相同属性和行为的多个对象。</p>
-<h5>举一个例子</h5>
 <p>举一个现实生活中的真实例子，比如一台电视机，可以打开和关闭、切换频道、调整音量、添加外部组件（如音响、录像机、DVD 播放器），但是我们不知道它的内部实现细节，也就是说，我们并不知道其如何通过缆线接收信号，如何转换信号，并最终显示在屏幕上。</p>
 <p>这样，我们就可以说电视分开了其内部实现和外部接口，我们无需知道其内部实现原理，直接通过外部接口（如遥控器）就可以操控电视。就C++而言，C++为数据抽象提供了可能。</p>
 <h4>为什么要封装？</h4>
@@ -186,6 +185,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>那么编译器在编译时如何区分名字相同的函数呢？答案就是函数传入参数的类型和顺序。这样，我们就可以让编译器通过函数的传入参数自动区分需要调用的函数，以此实现程序的简化，可读性更强。</p>
 <h2>后记</h2>
 <p>C++的面向对象特性还有很多，如虚函数、类的继承等。但由于嵌入式开发有时并不需要这么多的特性，所以本文暂且按下不表，后续笔者用到时会再写一篇。</p>
+<p>此外，C++有些功能需要在运行时进行操作，这对单片机而言可能会是较大的开销，因此笔者不建议使用C++的运行时特性。</p>
 <h2>参考</h2>
 <ul>
 <li><a href="https://www.runoob.com/cplusplus/cpp-data-encapsulation.html" target="_blank" rel="noopener noreferrer">C++ 数据封装——菜鸟教程</a></li>
