@@ -45,12 +45,12 @@ export default sidebar({
     {
       text: "🧰 NAS、服务器和软路由",
       icon: "",
-      prefix: "/NAS、服务器和软路由/",
+      prefix: "/NASServerRouter/",
       link: "",
       collapsible: true,
       children: "structure",
     },
   ],
   // 专题区（独立侧边栏）
-  "/NAS、服务器和软路由/NAS/": "structure",
+  "/NASServerRouter/NAS/": "structure",
 });
