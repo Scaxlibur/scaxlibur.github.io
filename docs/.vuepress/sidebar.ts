@@ -65,9 +65,9 @@ export default sidebar({
       prefix: "/NAS、服务器和软路由/",
       link: "",
       collapsible: true,
+      children: "structure",
+      /*
       children: [
-        "structure",
-        /*
         {
           text: "其他",
           icon: "fa6-solid:code-compare",
