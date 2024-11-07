@@ -10,7 +10,7 @@ export default navbar([
     icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
-      "/NAS、服务器和软路由/",
+      //"/NAS、服务器和软路由/",
       {
         text: "NAS",
         icon: "fa6-brands:chrome",
