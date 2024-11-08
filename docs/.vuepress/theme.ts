@@ -151,12 +151,13 @@ export default hopeTheme({
       include: true, //导入文件
       component: true, // 使用 component 代码块来在 Markdown 中添加组件
       footnote: true,
-      // tabs: true, // 选项卡
+      tabs: true, // 选项卡
       attrs: true, // 使用特殊标记为 Markdown 元素添加属性
       mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
       align: true, // 启用自定义对齐
-      // codetabs: true, // 代码块分组
-      // demo: true, //代码演示
+      codetabs: true, // 代码块分组
+      demo: true, //代码演示
+      markmap: true, //思维导图
     },
     markdownImage: {
       // mark: true, // 启用图片标记
@@ -176,6 +177,7 @@ export default hopeTheme({
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     },
     */
+
 
     // 本地搜索，和上方二选一
     searchPro: {
