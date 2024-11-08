@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-08T16:04:41.781Z</updated>
+  <updated>2024-11-08T16:10:54.757Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -74,7 +74,7 @@
     <title type="text">C++嵌入式开发入门</title>
     <id>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
     <link href="https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
-    <updated>2024-11-08T16:03:09.000Z</updated>
+    <updated>2024-11-08T16:09:28.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
 <p>本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1</p>
