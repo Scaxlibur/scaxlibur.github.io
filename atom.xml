@@ -4,11 +4,12 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-08T16:53:14.452Z</updated>
+  <updated>2024-11-08T17:01:00.150Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
   <category term="NAS"/>
+  <category term="软路由"/>
   <category term="ESP32"/>
   <category term="嵌入式开发"/>
   <category term="面向对象的程序设计"/>
@@ -37,6 +38,18 @@
 <p>简而言之，就是一个自己可以定制的导航主页。</p>
 ]]></content>
     <category term="NAS"/>
+    <published>2024-11-07T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">家庭网络的构建</title>
+    <id>https://scaxlibur.github.io/NASServerRouter/router/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA.html</id>
+    <link href="https://scaxlibur.github.io/NASServerRouter/router/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA.html"/>
+    <updated>2024-11-08T16:59:48.000Z</updated>
+    <summary type="html"><![CDATA[<p>还没开始写</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>还没开始写</p>
+]]></content>
+    <category term="软路由"/>
     <published>2024-11-07T00:00:00.000Z</published>
   </entry>
   <entry>

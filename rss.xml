@@ -6,11 +6,12 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 08 Nov 2024 16:53:14 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Nov 2024 16:53:14 GMT</lastBuildDate>
+    <pubDate>Fri, 08 Nov 2024 17:01:00 GMT</pubDate>
+    <lastBuildDate>Fri, 08 Nov 2024 17:01:00 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>NAS</category>
+    <category>软路由</category>
     <category>ESP32</category>
     <category>嵌入式开发</category>
     <category>面向对象的程序设计</category>
@@ -36,6 +37,17 @@
 <p><a href="https://registry.hub.docker.com/r/linuxserver/heimdall/" target="_blank" rel="noopener noreferrer">linuxserver/heimdall</a></p>
 <p>所谓个人导航，就是个人搭建的一种网络导航，有点像2345导航之类的，但放的全是自己的网站（当然也可以放其他网站，只是笔者需要整理自己折腾出来的东西）。</p>
 <p>简而言之，就是一个自己可以定制的导航主页。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>家庭网络的构建</title>
+      <link>https://scaxlibur.github.io/NASServerRouter/router/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA.html</link>
+      <guid>https://scaxlibur.github.io/NASServerRouter/router/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E5%BB%BA.html</guid>
+      <source url="https://scaxlibur.github.io/rss.xml">家庭网络的构建</source>
+      <description>还没开始写</description>
+      <category>软路由</category>
+      <pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>还没开始写</p>
 ]]></content:encoded>
     </item>
     <item>
