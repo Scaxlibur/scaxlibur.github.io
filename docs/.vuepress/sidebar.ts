@@ -56,6 +56,7 @@ export default sidebar(
       text: "🔧 NAS、服务器和路由器",
       icon: "fa6-solid:bars-staggered",
       prefix: "/",
+      collapsible: true,
       children: [
         //"/NASServerRouter/",
         {
