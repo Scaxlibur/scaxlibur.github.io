@@ -43,13 +43,28 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "🧰 NAS、服务器和软路由",
-      icon: "",
-      prefix: "/NASServerRouter/",
-      link: "",
-      collapsible: true,
-      children: "structure",
-    },
+      text: "NAS、服务器和软路由",
+      icon: "fa6-solid:bars-staggered",
+      prefix: "/",
+      children: [
+        //"/NASServerRouter/",
+        {
+          text: "NAS",
+          icon: "fa6-brands:chrome",
+          link: "NASServerRouter/NAS/",
+        },
+        /*
+        {
+          text: "服务器",
+          icon: "fa6-brands:chrome",
+          link: "NASServerRouter/服务器/",
+        },
+        */
+        {
+          text: "软路由",
+          icon: "fa6-brands:chrome",
+          link: "NASServerRouter/router/",
+        },
   ],
   // 专题区（独立侧边栏）
   //"/NASServerRouter/NAS/": "structure",
