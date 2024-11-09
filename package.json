@@ -18,10 +18,7 @@
     "vue": "^3.5.12",
     "vuepress": "2.0.0-rc.17",
     "vuepress-plugin-search-pro": "2.0.0-rc.57",
-    "vuepress-theme-hope": "2.0.0-rc.58",
-    "markmap-lib": "0.17.0",
-    "markmap-toolbar": "0.17.0",
-    "markmap-view": "0.17.0"
+    "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-rc.52",
@@ -36,6 +33,9 @@
     "prettier": "^3.3.3",
     "sass-embedded": "^1.79.5",
     "sass-loader": "^16.0.2",
-    "vidstack": "^1.12.11"
+    "vidstack": "^1.12.11",
+    "markmap-lib": "^0.17.0",
+    "markmap-toolbar": "^0.17.0",
+    "markmap-view": "^0.17.0"
   }
 }
