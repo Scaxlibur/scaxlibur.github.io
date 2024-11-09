@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 09 Nov 2024 13:56:17 GMT</pubDate>
-    <lastBuildDate>Sat, 09 Nov 2024 13:56:17 GMT</lastBuildDate>
+    <pubDate>Sat, 09 Nov 2024 13:56:43 GMT</pubDate>
+    <lastBuildDate>Sat, 09 Nov 2024 13:56:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -21,10 +21,11 @@
       <link>https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</link>
       <guid>https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">软路由入门指南</source>
-      <description>什么是软路由？ 软路由之所以叫软路由，就是为了和硬路由进行区分。硬路由有专用的包转发硬件设计，所以性能会优于软路由。虽然软路由使用软件实现包转发，但开放的生态和较强的硬件性能，或许可以实现“力大砖飞”的效果。 软路由需要怎样的配置？ 和硬路由需要专门的路由器不同，软路由几乎没有硬件上的硬性要求————只要不是太差都可以，你甚至可以在树莓派上运行软路由系...</description>
+      <description>什么是软路由？ 软路由 软路由之所以叫软路由，就是为了和硬路由进行区分。硬路由有专用的包转发硬件设计，所以性能会优于软路由。虽然软路由使用软件实现包转发，但开放的生态和较强的硬件性能，或许可以实现“力大砖飞”的效果。 软路由需要怎样的配置？ 和硬路由需要专门的路由器不同，软路由几乎没有硬件上的硬性要求————只要不是太差都可以，你甚至可以在树莓派上运行...</description>
       <category>软路由</category>
       <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>什么是软路由？</h2>
+<p>软路由</p>
 <p>软路由之所以叫软路由，就是为了和硬路由进行区分。硬路由有专用的包转发硬件设计，所以性能会优于软路由。虽然软路由使用软件实现包转发，但开放的生态和较强的硬件性能，或许可以实现“力大砖飞”的效果。</p>
 <h2>软路由需要怎样的配置？</h2>
 <p>和硬路由需要专门的路由器不同，软路由几乎没有硬件上的硬性要求————只要不是太差都可以，你甚至可以在树莓派上运行软路由系统。正因如此，笔者选择在hyper-V虚拟机上运行软路由系统。</p>
