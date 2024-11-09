@@ -18,7 +18,8 @@
     "vue": "^3.5.12",
     "vuepress": "2.0.0-rc.17",
     "vuepress-plugin-search-pro": "2.0.0-rc.57",
-    "vuepress-theme-hope": "2.0.0-rc.58"
+    "vuepress-theme-hope": "2.0.0-rc.58",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.57"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-rc.52",
