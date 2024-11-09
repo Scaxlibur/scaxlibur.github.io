@@ -54,14 +54,13 @@ export default sidebar(
     */
     {
       text: "🔧 NAS、服务器和路由器",
-      icon: "fa6-solid:bars-staggered",
       prefix: "/",
       collapsible: true,
       children: [
         //"/NASServerRouter/",
         {
           text: "NAS",
-          icon: "fa6-brands:chrome",
+          icon: "fa6-brands:hard-drive",
           link: "NASServerRouter/NAS/",
         },
         /*
@@ -73,7 +72,7 @@ export default sidebar(
         */
         {
           text: "软路由",
-          icon: "fa6-brands:chrome",
+          icon: "fa6-brands:wifi",
           link: "NASServerRouter/router/",
         },
       ]
