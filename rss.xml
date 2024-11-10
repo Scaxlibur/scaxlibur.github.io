@@ -6,15 +6,14 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 10 Nov 2024 14:42:02 GMT</pubDate>
-    <lastBuildDate>Sun, 10 Nov 2024 14:42:02 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Nov 2024 14:44:23 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Nov 2024 14:44:23 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
     <category>NAS</category>
     <category>ESP32</category>
     <category>嵌入式开发</category>
-    <category>面向对象的程序设计</category>
     <category>物联网</category>
     <item>
       <title>软路由入门指南</title>
@@ -95,7 +94,6 @@
       <source url="https://scaxlibur.github.io/rss.xml">C++嵌入式开发入门</source>
       <description>前言 C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。 本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1 本文的例子来源于AS608指纹模块在ESP-IDF环境下的驱动 正文 ...</description>
       <category>嵌入式开发</category>
-      <category>面向对象的程序设计</category>
       <pubDate>Sun, 03 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
