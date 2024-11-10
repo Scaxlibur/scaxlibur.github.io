@@ -36,23 +36,6 @@ export default sidebar(
       children: "structure",
     },
     {
-      text: "🗒️ 博客文章",
-      icon: "",
-      prefix: "/_posts/",
-      link: "/blog",
-      collapsible: false,
-      children: "structure",
-    },
-    /*
-    {
-      text: "🔧 NAS、服务器和路由器",
-      icon: "",
-      prefix: "/NASServerRouter/",
-      collapsible: true,
-      children: "structure",
-    },
-    */
-    {
       text: "🔧 NAS、服务器和路由器",
       prefix: "/",
       collapsible: true,
@@ -60,7 +43,7 @@ export default sidebar(
         //"/NASServerRouter/",
         {
           text: "NAS",
-          icon: "fa6-classic:hard-drive",
+          icon: "fa-solid:fa-hard-drive",
           link: "NASServerRouter/NAS/",
         },
         /*
@@ -72,11 +55,19 @@ export default sidebar(
         */
         {
           text: "软路由",
-          icon: "fa6-classic:wifi",
+          icon: "fa-solid:fa-wifi",
           link: "NASServerRouter/router/",
         },
       ]
-    }
+    },
+    {
+      text: "🗒️ 博客文章",
+      icon: "",
+      prefix: "/_posts/",
+      link: "/blog",
+      collapsible: false,
+      children: "structure",
+    },
   // 专题区（独立侧边栏）
   //"/NASServerRouter/NAS/": "structure",
 ]

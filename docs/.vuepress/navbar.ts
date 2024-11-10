@@ -13,7 +13,7 @@ export default navbar([
       //"/NASServerRouter/",
       {
         text: "NAS",
-        icon: "fa6-classic:hard-drive",
+        icon: "fa-solid:fa-hard-drive",
         link: "NASServerRouter/NAS/",
       },
       /*
@@ -25,7 +25,7 @@ export default navbar([
       */
       {
         text: "软路由",
-        icon: "fa6-classic:wifi",
+        icon: "fa-solid:fa-wifi",
         link: "NASServerRouter/router/",
       },
       /*
