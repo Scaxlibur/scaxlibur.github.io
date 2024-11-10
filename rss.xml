@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 10 Nov 2024 06:35:51 GMT</pubDate>
-    <lastBuildDate>Sun, 10 Nov 2024 06:35:51 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Nov 2024 07:18:04 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Nov 2024 07:18:04 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -226,8 +226,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>那么编译器在编译时如何区分名字相同的函数呢？答案就是函数传入参数的类型和顺序。这样，我们就可以让编译器通过函数的传入参数自动区分需要调用的函数，以此实现程序的简化，可读性更强。</p>
 <h2>写了这么多，应该怎么应用呢？</h2>
 <p>以下是笔者的项目结构，按从功能到实现的顺序画的思维导图</p>
-<div class="language-markmap line-numbers-mode" data-highlighter="shiki" data-ext="markmap" data-title="markmap" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span></span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
+]]></content:encoded>
     </item>
     <item>
       <title>总线舵机</title>

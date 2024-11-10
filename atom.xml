@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-10T06:35:51.348Z</updated>
+  <updated>2024-11-10T07:18:04.814Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -18,7 +18,7 @@
     <title type="text">软路由入门指南</title>
     <id>https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</id>
     <link href="https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html"/>
-    <updated>2024-11-09T13:55:24.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>什么是软路由？</h2>
 <p>软路由</p>
 <p>软路由之所以叫软路由，就是为了和硬路由进行区分。硬路由有专用的包转发硬件设计，所以性能会优于软路由。虽然软路由使用软件实现包转发，但开放的生态和较强的硬件性能，或许可以实现“力大砖飞”的效果。</p>
@@ -75,7 +75,7 @@
     <title type="text">有用的Docker镜像</title>
     <id>https://scaxlibur.github.io/NASServerRouter/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html</id>
     <link href="https://scaxlibur.github.io/NASServerRouter/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html"/>
-    <updated>2024-11-07T14:10:48.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>为什么用Docker？</h2>
 <p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>
 <p>轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Docker，光是处理不同设备上的依赖项就是难以愉悦的鸿沟。</p>
@@ -101,7 +101,7 @@
     <title type="text">FreeRTOS简介</title>
     <id>https://scaxlibur.github.io/EmbeddedDevelopment/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html</id>
     <link href="https://scaxlibur.github.io/EmbeddedDevelopment/FreeRTOS/2024-11-06-FreeRTOS%E7%AE%80%E4%BB%8B.html"/>
-    <updated>2024-11-07T15:01:02.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>1.什么是FreeRTOS？</h2>
 <p>FreeRTOS是一个热门的嵌入式设备用即时操作系统核心，它于2003年由Richard Barry设计，并已被经成功移植到35种不同的微控制器上。</p>
 <p>ESP32系列中的FreeRTOS和原始FreeRTOS有所不同。原始FreeRTOS是一款小巧高效的实时操作系统，适用于许多单核MCU和SoC。但为了支持双核ESP芯片，如ESP32、ESP32-S3、ESP32-P4，ESP-IDF特别提供了支持双核对称多处理 (SMP) 的 FreeRTOS 实现。</p>
@@ -132,7 +132,7 @@
     <title type="text">C++嵌入式开发入门</title>
     <id>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
     <link href="https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
-    <updated>2024-11-08T17:08:50.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
 <p>本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1</p>
@@ -269,8 +269,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>那么编译器在编译时如何区分名字相同的函数呢？答案就是函数传入参数的类型和顺序。这样，我们就可以让编译器通过函数的传入参数自动区分需要调用的函数，以此实现程序的简化，可读性更强。</p>
 <h2>写了这么多，应该怎么应用呢？</h2>
 <p>以下是笔者的项目结构，按从功能到实现的顺序画的思维导图</p>
-<div class="language-markmap line-numbers-mode" data-highlighter="shiki" data-ext="markmap" data-title="markmap" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span></span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content>
+]]></content>
     <category term="ESP32"/>
     <category term="嵌入式开发"/>
     <category term="面向对象的程序设计"/>
@@ -280,7 +279,7 @@
     <title type="text">总线舵机</title>
     <id>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</id>
     <link href="https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html"/>
-    <updated>2024-11-07T15:01:02.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>总线舵机是一种利用UART总线进行控制的舵机。笔者购买的总线舵机使用单线UART总线，即TX与RX在同一条线上。有的文章指出这样的设计会产生冲突，但笔者猜测如果总线上只有总线舵机，干扰可以通过软件方法解决。</p>
 <p>本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1</p>
@@ -481,7 +480,7 @@
     <title type="text">ESP32计时器</title>
     <id>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html</id>
     <link href="https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-22-ESP32%E8%AE%A1%E6%97%B6%E5%99%A8.html"/>
-    <updated>2024-11-07T15:01:02.000Z</updated>
+    <updated>2024-11-10T07:07:56.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>ESP-IDF利用结构体进行各种配置，计时器的配置是一个典型案例。</p>
 <h2>正文</h2>
