@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-10T07:46:44.390Z</updated>
+  <updated>2024-11-10T08:25:35.444Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -130,7 +130,7 @@
     <title type="text">C++嵌入式开发入门</title>
     <id>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</id>
     <link href="https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html"/>
-    <updated>2024-11-10T07:37:01.000Z</updated>
+    <updated>2024-11-10T08:24:08.000Z</updated>
     <summary type="html"><![CDATA[<h2>前言</h2>
 <p>C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。</p>
 <p>本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1</p>
@@ -266,9 +266,9 @@
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>那么编译器在编译时如何区分名字相同的函数呢？答案就是函数传入参数的类型和顺序。这样，我们就可以让编译器通过函数的传入参数自动区分需要调用的函数，以此实现程序的简化，可读性更强。</p>
 <h2>写了这么多，应该怎么应用呢？</h2>
-<p>以下是笔者的项目结构，按从功能到实现的顺序画的思维导图</p>
+<p>以下是笔者的项目结构，按从功能到实现的顺序画的思维导图：</p>
+<p>（可以拖动，不妨尝试一下）</p>
 ]]></content>
-    <category term="ESP32"/>
     <category term="嵌入式开发"/>
     <category term="面向对象的程序设计"/>
     <published>2024-11-03T00:00:00.000Z</published>
