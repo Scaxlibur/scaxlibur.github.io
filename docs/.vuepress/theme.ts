@@ -158,6 +158,8 @@ export default hopeTheme({
       codetabs: true, // 代码块分组
       demo: true, //代码演示
       markmap: true, //思维导图
+      spoiler: true, //剧透
+      hint : true, //提示容器
     },
     markdownImage: {
       // mark: true, // 启用图片标记
