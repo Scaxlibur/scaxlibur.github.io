@@ -3,19 +3,14 @@
 # Vuepress Temp
 **/.vuepress/.temp/**
 # Vuepress Output
-dist/
-# Lib files
-**/.vuepress/public/assets/lib/
+**/.vuepress/dist/**
+**/.vuepress/templateBuild.html
+
+# live2d
+docs/.vuepress/public/live2d-widget/**
 
 # Node modules
 node_modules/
-
-# Test Coverage
-coverage/
-
-# Build files
-docs-shared/lib/
-packages/*/lib/
 
 # pnpm lock file
 pnpm-lock.yaml

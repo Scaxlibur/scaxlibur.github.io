@@ -1,79 +1,64 @@
-name: Main Action
+name: docs build
 
 on:
   push:
     branches:
-      - "**"
-    tags:
-      - v2.**
-  pull_request:
-    branches:
+      # 确保这是你正在使用的分支名称
       - main
-      - work
+
+permissions:
+  contents: write
 
 jobs:
-  build-project:
-    name: Build Project
-    uses: ./.github/workflows/build-project.yml
+  LearnData-build:
+    runs-on: ubuntu-latest
+    env:
+      FTP_HOST: ${{ secrets.ftp_host }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          # 获取所有标记和分支的所有历史记录（updatetime 必须，否则每次都会变化）
+          fetch-depth: 0
+          # 如果文档包含 Git 子模块，请取消注释下一行
+          # submodules: true
 
-  test-demos:
-    needs:
-      - build-project
-    uses: ./.github/workflows/demo-test.yml
-    with:
-      # Check demos in all environments when pull request is made to main or work branch
-      strict-checking: ${{ github.base_ref == 'main' || github.base_ref == 'work' }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: true
 
-  linter-and-unit:
-    needs:
-      - build-project
-    uses: ./.github/workflows/linter-and-unit-test.yml
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
-  deploy-github-demo:
-    name: Deploy GitHub Demo
-    # Only triggered on main or work branch
-    if: github.ref_name == 'main' || github.ref_name == 'work'
-    needs:
-      - build-project
-      - test-demos
-      - linter-and-unit
-    uses: ./.github/workflows/deploy-github-demo.yml
-    secrets:
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      # 复制读书笔记到静态页面路径，并构建页面
+      - name: Build Docs
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |-
+          pnpm cpx "docs/reading/**" docs/.vuepress/public/reading
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
 
-  deploy-github-docs:
-    name: Deploy GitHub Docs
-    # Only triggered on main or work branch
-    if: github.ref_name == 'main' || github.ref_name == 'work'
-    needs:
-      - build-project
-      - test-demos
-      - linter-and-unit
-    uses: ./.github/workflows/deploy-github-docs.yml
-    secrets:
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Deploy GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 指定静态文件部署到的分支
+          branch: gh-pages
+          folder: docs/.vuepress/dist
 
-  deploy-production:
-    name: Deploy Production Docs and Demo
-    # Only triggered by v2 tag push
-    if: github.event_name == 'push' && github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v2.')
-    needs:
-      - build-project
-      - test-demos
-      - linter-and-unit
-    uses: ./.github/workflows/deploy-production.yml
-    secrets:
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-  publish-packages:
-    name: Publish Packages
-    # Only triggered by v2 tag push
-    if: github.event_name == 'push' && github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v2.')
-    needs:
-      - build-project
-      - test-demos
-      - linter-and-unit
-      - deploy-production
-    uses: ./.github/workflows/publish.yml
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # 如果配置了 FTP 服务器密钥，才会执行本步骤，将页面静态文件同步到服务器
+      - name: 📂 Sync files
+        if: env.FTP_HOST != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          local-dir: docs/.vuepress/dist/
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
+          timeout: 600000
