@@ -7,10 +7,7 @@ export default hopeTheme({
   hostname: "https://scaxlibur.github.io/",
   // 公用 CDN 在部分浏览器中可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
   // https://icon-sets.iconify.design/
-  iconAssets: [
-    "iconify",
-    "fontawesome",
-  ],
+  iconAssets: "iconify",
   author: {
     name: "Scaxlibur博客",
     url: "https://scaxlibur.github.io/",
