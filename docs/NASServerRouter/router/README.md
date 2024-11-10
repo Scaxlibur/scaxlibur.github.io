@@ -1,7 +1,7 @@
 ---
 article: false
 index: false
-title: NAS
+title: 软路由
 icon: fa6-solid:icons
 ---
 
