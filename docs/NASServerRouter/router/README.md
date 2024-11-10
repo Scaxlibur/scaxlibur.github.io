@@ -11,6 +11,6 @@ icon: fa6-solid:icons
 
 <!-- markdownlint-disable MD033 -->
 
-<Catalog base='/NASServerRouter/NAS' />
+<Catalog base='/NASServerRouter/router' />
 
 <!-- markdownlint-enable MD033 -->
