@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 10 Nov 2024 14:44:23 GMT</pubDate>
-    <lastBuildDate>Sun, 10 Nov 2024 14:44:23 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Nov 2024 15:21:29 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Nov 2024 15:21:29 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -17,8 +17,8 @@
     <category>物联网</category>
     <item>
       <title>软路由入门指南</title>
-      <link>https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</link>
-      <guid>https://scaxlibur.github.io/NASServerRouter/router/%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</guid>
+      <link>https://scaxlibur.github.io/NASServerRouter/router/2024-11-09-%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</link>
+      <guid>https://scaxlibur.github.io/NASServerRouter/router/2024-11-09-%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">软路由入门指南</source>
       <description>什么是软路由？ 软路由是指利用台式机或服务器的供应商配合一定软件而形成的路由解决方案，主要靠对软件的设置，实现路由器的功能，它的软件与硬件是独立分开的。软路由使用普通计算机，使用通用的操作系统，如Linux或windows，因此软路由的设置事实上是windows或linux的设置。根据使用的操作系统不同，可以分为基于windows平台和基于Linux/...</description>
       <category>软路由</category>
