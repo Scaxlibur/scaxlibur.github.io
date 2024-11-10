@@ -1,19 +1,72 @@
-# Scaxlibur的博客
+<!-- markdownlint-disable -->
+<p align="center">
+  <img width="240" src="https://theme-hope-assets.vuejs.press/logo.svg" style="text-align: center;">
+</p>
+<h1 align="center">vuepress-theme-hope</h1>
+<h4 align="center">A VuePress theme with tons of features✨</h4>
 
-我喜欢写作，也喜欢分享，所以创建了这个博客。
+<h4 align="center">
 
-## 为什么写博客？
+[中文简介](README-zh.md) | [Russian README](https://github.com/vuepress-theme-hope/theme-ru-docs)
 
-在这个博客创建的2024年，依附于各种平台的自媒体大行其道，个人搭建博客早已是明日黄花。但我热爱探索新的技术，不愿囿于前人的探索路径，所以我选择利用个人博客发表自己学习的心得与见解。
+</h4>
 
-此外，我不喜欢视频教程，因为我总觉得视频教程的信息密度低，难以勾起我的兴趣。不知道是否出于个人原因，我在观看视频教程时容易走神，看着看着就不知道作者讲到哪儿了。大部分文字教程都发布于个人博客，所以我也仿照前人的方式，一字一句记下学习的路途，供后来者参考。
+[![Author: Mr.Hope](https://img.shields.io/badge/Author-Mr.Hope-blue.svg?style=for-the-badge)](https://mister-hope.com)
+[![License](https://img.shields.io/npm/l/vuepress-theme-hope.svg?style=for-the-badge)](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/LICENSE)
+[![Open in Visual Studio Code](https://img.shields.io/badge/-open%20in%20vscode-blue?style=for-the-badge&logo=visualstudiocode)](https://open.vscode.dev/vuepress-theme-hope/vuepress-theme-hope)
 
-“负箧曳徙，行深山巨谷中。”这是我的座右铭，我想这就是我日常的状态。
+<!-- markdownlint-restore -->
 
-## 我准备写什么？
+[![Version](https://img.shields.io/npm/v/vuepress-theme-hope.svg?style=flat-square&logo=npm)![Downloads](https://img.shields.io/npm/dm/vuepress-theme-hope.svg?style=flat-square&logo=npm)![Total downloads](https://img.shields.io/npm/dt/vuepress-theme-hope?style=flat-square&logo=npm)](https://www.npmjs.com/package/vuepress-theme-hope)
 
-主要写ESP32应用心得和我在图吧当垃圾佬的经历。
+[![open collective](https://opencollective.com/vuepress-theme-hope/tiers/badge.svg)](https://opencollective.com/vuepress-theme-hope)
 
-我的主要学习方向是嵌入式开发，再细分一些就是信号处理。在这个方向上，大多数人都使用STM32系列芯片作为主控。但在偶然间，我接触到了ESP32系列。这样一块国产的芯片给我带来了太多的惊喜，Arduino环境的支持也让我回忆起了以前使用Arduino UNO调试PID的日子。这或许就像《追忆似水年华》中的小玛德莲娜饼干，只消闻到其香味，美好的昨日记忆就在眼前徐徐展开。
+[![DeepScan grade](https://deepscan.io/api/teams/9792/projects/17544/branches/405512/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9792&pid=17544&bid=405512)
+![CodeQL](https://github.com/vuepress-theme-hope/vuepress-theme-hope/actions/workflows/codeql-analysis.yml/badge.svg)
+[![code cov](https://codecov.io/gh/vuepress-theme-hope/vuepress-theme-hope/branch/main/graph/badge.svg?token=TNYMbGlxQ9)](https://codecov.io/gh/vuepress-theme-hope/vuepress-theme-hope)
+![Test theme](https://github.com/vuepress-theme-hope/vuepress-theme-hope/actions/workflows/main.yml/badge.svg)
 
-有人可能说ESP32性能孱弱，难堪大任。但我相信ESP32-S3凭借丰富的外设和240MHz的主频也能挑起大梁。更何况，更高性能的实时处理，还有FPGA负责嘛。
+A VuePress theme with tons of features✨
+
+## [English Docs](https://theme-hope.vuejs.press/)
+
+## [Online Demo](https://stackblitz.com/fork/vuepress-theme-hope)
+
+## Special Sponsor
+
+[![Grey Software](https://vuepress-theme-hope.github.io/grey-software.svg)](https://grey.software/)
+
+## Contact
+
+We recommend you to contact using [issues](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues) and [discussions](https://github.com/vuepress-theme-hope/vuepress-theme-hope/discussions), but you are welcome to join our [telegram group!](https://t.me/vuepressthemehope).
+
+## Details
+
+V2 is based on [**VuePress2**](https://vuejs.press), with the power of [**Vite5**](https://vitejs.dev) / [**Webpack5**](https://webpack.js.org) using [**Vue3**](https://vuejs.org) to provide powerful features.
+
+V2 is a full rewrite including:
+
+- All the components are rewritten with **Composition API in Vue3**
+- All the styles are migrated to **Sass**
+
+Also V2 has a better performance:🚀
+
+- DevServer cold start time reduced by **70%**
+- Build memory usage reduced by **65%**
+- Build time reduced by **75%**
+- Output Size reduced by **45%**
+- Webpage performance up to **60%**
+
+## Project Status
+
+![Status](https://repobeats.axiom.co/api/embed/1164cd0962fe9e8ce7fd3785cb28c79adecf8a26.svg)
+
+## Contributors
+
+Thanks to all the contributors!
+
+[![contributors](https://contrib.rocks/image?repo=vuepress-theme-hope/vuepress-theme-hope)](https://github.com/vuepress-theme-hope/vuepress-theme-hope/graphs/contributors)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/vuepress-theme-hope/vuepress-theme-hope.svg)](https://starchart.cc/vuepress-theme-hope/vuepress-theme-hope)
