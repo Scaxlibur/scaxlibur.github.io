@@ -40,7 +40,7 @@ export default sidebar(
       icon: "",
       prefix: "/_posts/",
       link: "/blog",
-      collapsible: true,
+      collapsible: false,
       children: "structure",
     },
     /*
@@ -60,7 +60,7 @@ export default sidebar(
         //"/NASServerRouter/",
         {
           text: "NAS",
-          icon: "fa6-brands:hard-drive",
+          icon: "fa6-classic:hard-drive",
           link: "NASServerRouter/NAS/",
         },
         /*
@@ -72,7 +72,7 @@ export default sidebar(
         */
         {
           text: "软路由",
-          icon: "fa6-brands:wifi",
+          icon: "fa6-classic:wifi",
           link: "NASServerRouter/router/",
         },
       ]
