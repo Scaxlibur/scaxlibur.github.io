@@ -10,7 +10,6 @@ export default navbar([
     icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
-      //"/NASServerRouter/",
       {
         text: "NAS",
         icon: "bi:hdd-network",
@@ -55,7 +54,21 @@ export default navbar([
         link: "https://www.aishort.top/",
       },
       { text: "IMGPrompt", icon: "fa6-solid:image", link: "https://prompt.newzone.top/" },
-      { text: "多语言翻译", icon: "fa6-solid:language", link: "https://tools.newzone.top/json-translate" },
     ],
   },
+  {
+    text: "教程",
+    icon: "material-symbols:menu-book-outline",
+    children: [
+      {
+        text: "Docker教程",
+        icon: "teenyicons:docker-outline",
+        link: "https://yeasy.gitbook.io/docker_practice",
+      },
+      { text: "编程语言教程",
+        icon: "mingcute:computer-line",
+        link: "https://www.runoob.com/" 
+      },
+    ]
+  }
 ]);
