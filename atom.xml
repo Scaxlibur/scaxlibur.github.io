@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-11T15:40:57.722Z</updated>
+  <updated>2024-11-11T16:16:52.956Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -95,9 +95,9 @@
     <title type="text">黑群晖NAS的硬件配置</title>
     <id>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</id>
     <link href="https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2024-11-11T15:39:28.000Z</updated>
+    <updated>2024-11-11T16:15:20.000Z</updated>
     <summary type="html"><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样以来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
 <p>以下是笔者选择的板U配置：</p>
 <table>
 <thead>
@@ -146,7 +146,7 @@
 </tbody>
 </table>]]></summary>
     <content type="html"><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样以来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
 <p>以下是笔者选择的板U配置：</p>
 <p>|          |          型号         |
 |</p>
