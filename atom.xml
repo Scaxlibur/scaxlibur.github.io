@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-11T14:49:05.435Z</updated>
+  <updated>2024-11-11T15:40:57.722Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -67,9 +67,9 @@
   </entry>
   <entry>
     <title type="text">有用的Docker镜像</title>
-    <id>https://scaxlibur.github.io/NASServerRouter/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html</id>
-    <link href="https://scaxlibur.github.io/NASServerRouter/NAS/%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html"/>
-    <updated>2024-11-10T07:07:56.000Z</updated>
+    <id>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-07-%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html</id>
+    <link href="https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-07-%E6%9C%89%E7%94%A8%E7%9A%84dockerIMG.html"/>
+    <updated>2024-11-11T15:39:28.000Z</updated>
     <summary type="html"><![CDATA[<h2>为什么用Docker？</h2>
 <p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p>
 <p>轻量级、可移植的特性为家庭用户拓展NAS功能带来了极大的便利。如果没有Docker，光是处理不同设备上的依赖项就是难以愉悦的鸿沟。</p>
@@ -87,6 +87,69 @@
 <p><a href="https://registry.hub.docker.com/r/linuxserver/heimdall/" target="_blank" rel="noopener noreferrer">linuxserver/heimdall</a></p>
 <p>所谓个人导航，就是个人搭建的一种网络导航，有点像2345导航之类的，但放的全是自己的网站（当然也可以放其他网站，只是笔者需要整理自己折腾出来的东西）。</p>
 <p>简而言之，就是一个自己可以定制的导航主页。</p>
+]]></content>
+    <category term="NAS"/>
+    <published>2024-11-07T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">黑群晖NAS的硬件配置</title>
+    <id>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</id>
+    <link href="https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html"/>
+    <updated>2024-11-11T15:39:28.000Z</updated>
+    <summary type="html"><![CDATA[<h2>CPU和主板的选择</h2>
+<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样以来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>以下是笔者选择的板U配置：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>intel N5105</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>DDR4 最大64G</td>
+</tr>
+<tr>
+<td>网卡</td>
+<td>4个Intel i225 2.5G网卡</td>
+</tr>
+<tr>
+<td>SATA</td>
+<td>6个SATA3.0接口</td>
+</tr>
+<tr>
+<td>M.2</td>
+<td>2个</td>
+</tr>
+<tr>
+<td>外部USB接口</td>
+<td>2个USB3.0，2个USB2.0</td>
+</tr>
+<tr>
+<td>内部USB接口</td>
+<td>4个USB2.0</td>
+</tr>
+<tr>
+<td>尺寸</td>
+<td>标准ITX</td>
+</tr>
+<tr>
+<td>散热器</td>
+<td>自带一个丐版风冷</td>
+</tr>
+</tbody>
+</table>]]></summary>
+    <content type="html"><![CDATA[<h2>CPU和主板的选择</h2>
+<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样以来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>以下是笔者选择的板U配置：</p>
+<p>|          |          型号         |
+|</p>
 ]]></content>
     <category term="NAS"/>
     <published>2024-11-07T00:00:00.000Z</published>
