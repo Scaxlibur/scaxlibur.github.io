@@ -54,6 +54,20 @@ export default navbar([
         link: "https://www.aishort.top/",
       },
       { text: "IMGPrompt", icon: "fa6-solid:image", link: "https://prompt.newzone.top/" },
+      { 
+        text: "PPT模板",
+        icon: "fa6-solid:image",
+        children: [
+          {
+            text: "PPT超市",
+            link: "https://www.pptsupermarket.com/" 
+          },
+          {
+            text: "第一PPT",
+            link: "https://www.1ppt.com/" 
+          },
+        ]
+      },
     ],
   },
   {
@@ -68,6 +82,20 @@ export default navbar([
       { text: "编程语言教程",
         icon: "mingcute:computer-line",
         link: "https://www.runoob.com/" 
+      },      
+    ]
+  },
+  {
+    text: "For Joy",
+    icon: "tdesign:joyful",
+    children: [
+      { text: "数字艺术馆",
+        icon: "mdi:paint-outline",
+        link: "https://useum.org/" 
+      },
+      { text: "光影绘画",
+        icon: "fluent-emoji-high-contrast:paintbrush",
+        link: "http://weavesilk.com/" 
       },
     ]
   }
