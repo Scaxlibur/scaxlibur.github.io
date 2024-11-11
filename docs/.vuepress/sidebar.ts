@@ -8,26 +8,6 @@ export default sidebar(
     // 读书笔记架构更换到 docsify，不能使用相对链接
     { text: "读书笔记", icon: "fa6-brands:readme", link: "https://scaxlibur.github.io/reading/" },
     // 指定显示页面
-    /*
-    {
-      text: "🏗️ 网站部署",
-      icon: "",
-      prefix: "/网站部署/",
-      link: "",
-      collapsible: true,
-      children: [
-        "Static.md",
-        "CloudServices.md",
-        "VPS.md",
-        {
-          text: "部署工具",
-          icon: "fa6-brands:windows",
-          collapsible: true,
-          children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
-        },
-      ],
-    },
-    */
     {
       text: "🔡 嵌入式开发",
       icon: "",

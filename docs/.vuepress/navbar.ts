@@ -27,20 +27,6 @@ export default navbar([
         icon: "fa-solid:wifi",
         link: "NASServerRouter/router/",
       },
-      /*
-      {
-        text: "服务/专题",
-        icon: "",
-        prefix: "",
-        children: [
-          {
-            text: "专题示例",
-            icon: "fa6-solid:dice-d20",
-            link: "apps/topic/",
-          },
-        ],
-      },
-      */
     ],
   },
 
@@ -48,11 +34,7 @@ export default navbar([
     text: "工具",
     icon: "fa6-solid:toolbox",
     children: [
-      {
-        text: "ChatGPT SC",
-        icon: "fa6-solid:bolt",
-        link: "https://www.aishort.top/",
-      },
+      {text: "ChatGPT SC",icon: "fa6-solid:bolt",link: "https://www.aishort.top/",},
       { text: "IMGPrompt", icon: "fa6-solid:image", link: "https://prompt.newzone.top/" },
       { 
         text: "PPT模板",
