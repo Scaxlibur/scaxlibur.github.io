@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 12 Nov 2024 12:35:26 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Nov 2024 12:35:26 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Nov 2024 13:01:02 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Nov 2024 13:01:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -126,8 +126,8 @@
     </item>
     <item>
       <title>C++嵌入式开发入门</title>
-      <link>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</link>
-      <guid>https://scaxlibur.github.io/posts/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</guid>
+      <link>https://scaxlibur.github.io/EmbeddedDevelopment/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</link>
+      <guid>https://scaxlibur.github.io/EmbeddedDevelopment/2024-11-03-C__%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">C++嵌入式开发入门</source>
       <description>前言 C++大体上与C类似，是一门广泛应用的嵌入式开发语言。但因其支持面向对象特性，在嵌入式开发的部分领域，尤其是复杂系统的构建中更具优势。本文将以ESP-IDF为例，简要介绍C++的封装与多态在嵌入式开发中的应用。 本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1 本文的例子来源于AS608指纹模块在ESP-IDF环境下的驱动 正文 ...</description>
       <category>嵌入式开发</category>
