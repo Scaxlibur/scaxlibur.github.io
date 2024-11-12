@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 12 Nov 2024 11:22:15 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Nov 2024 11:22:15 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Nov 2024 12:35:26 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Nov 2024 12:35:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -84,14 +84,14 @@
     </item>
     <item>
       <title>黑群晖NAS的硬件配置</title>
-      <link>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</link>
-      <guid>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</guid>
+      <link>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</link>
+      <guid>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">黑群晖NAS的硬件配置</source>
-      <description>CPU和主板的选择 一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 哥们你都玩黑群晖了还选啥？ 以下是笔者选择的板U配置： 核显 黑群晖中的核显，主要用于视频的硬解码。当...</description>
+      <description>CPU和主板的选择 一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 哥们你都玩黑群晖了还选啥？ 以下是笔者选择的板U配置： 核显 黑群晖中的核显，主要用于视频的硬解码。...</description>
       <category>NAS</category>
       <pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，我这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
 <p>以下是笔者选择的板U配置：</p>
 <p>|          |          型号         |
 |</p>
