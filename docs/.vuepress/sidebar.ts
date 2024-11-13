@@ -41,6 +41,13 @@ export default sidebar(
       ]
     },
     {
+      text: "🤡 杂七杂八",
+      icon: "",
+      prefix: "/whatever/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "🗒️ 博客文章",
       icon: "",
       prefix: "/_posts/",
