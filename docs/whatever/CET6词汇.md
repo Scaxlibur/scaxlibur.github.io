@@ -5,6 +5,7 @@ tag:
   - 学习资料
 order: -1
 article: false
+icon : material-symbols-light:dictionary-outline
 ---
 
 | 单词 | 释义 |
