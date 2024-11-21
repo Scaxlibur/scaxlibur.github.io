@@ -87,8 +87,8 @@ export default hopeTheme({
     },
   },
 
-  // 隐藏打印按钮
-  // print: false,
+  // 打印按钮
+  print: true,
 
   plugins: {
     blog: true,
