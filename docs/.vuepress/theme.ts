@@ -171,6 +171,9 @@ export default hopeTheme({
       alert: true, // GFM 警告
       hint: true, // 提示容器
     },
+    markdownMath: {
+      type: "katex", // 或 'mathjax'
+    },
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     /* 
     docsearch: {
