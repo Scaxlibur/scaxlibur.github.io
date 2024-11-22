@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-21T16:58:30.600Z</updated>
+  <updated>2024-11-22T07:08:04.728Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -18,7 +18,7 @@
     <title type="text">三极管和场效应管</title>
     <id>https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html</id>
     <link href="https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html"/>
-    <updated>2024-11-21T16:56:52.000Z</updated>
+    <updated>2024-11-22T07:06:11.000Z</updated>
     <summary type="html"><![CDATA[<h2>思维导图</h2>
 <h2>一、 三极管/场效应管的工作原理</h2>
 <p>三极管，又称晶体管（Transistor），是一种由半导体材料制成的三端器件。其主要由三个区域构成： <strong>发射极</strong>（Emitter）、<strong>基极</strong>（Base）和<strong>集电极</strong>（Collector）。根据材料的掺杂方式，三极管可以分为NPN型和PNP型两种类型。</p>
