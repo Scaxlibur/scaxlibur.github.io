@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2024-11-22T12:30:48.474Z</updated>
+  <updated>2024-11-22T12:44:22.483Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -18,7 +18,7 @@
     <title type="text">三极管和场效应管</title>
     <id>https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html</id>
     <link href="https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html"/>
-    <updated>2024-11-22T12:29:17.000Z</updated>
+    <updated>2024-11-22T12:42:41.000Z</updated>
     <summary type="html"><![CDATA[<h2>思维导图</h2>
 <p>不妨试试放大和拖动这张图</p>
 <h2>一、 三极管/场效应管的工作原理</h2>
@@ -36,38 +36,6 @@
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>思维导图</h2>
 <p>不妨试试放大和拖动这张图</p>
-<h2>一、 三极管/场效应管的工作原理</h2>
-<p>三极管，又称晶体管（Transistor），是一种由半导体材料制成的三端器件。其主要由三个区域构成： <strong>发射极</strong>（Emitter）、<strong>基极</strong>（Base）和<strong>集电极</strong>（Collector）。根据材料的掺杂方式，三极管可以分为NPN型和PNP型两种类型。</p>
-<ul>
-<li>
-<p>发射极：高掺杂区域，用于发射载流子。</p>
-</li>
-<li>
-<p>基极：极薄且轻掺杂，起到控制载流子流动的作用。</p>
-</li>
-<li>
-<p>集电极：较厚的轻掺杂区域，用于收集发射极发出的载流子。</p>
-</li>
-</ul>
-<figure><figcaption>NPN三极管物理模型</figcaption></figure>
-<p>三极管的工作主要经过以下几个过程：</p>
-<ol>
-<li>
-<p>基极输入电流或电压的变化，通过空间电荷区的扩散和漂移作用，产生电子和空穴对。</p>
-</li>
-<li>
-<p>电子和空穴对通过扩散和漂移作用进入集电极和发射极，形成集电极电流和发射极电流。</p>
-</li>
-<li>
-<p>发射极电流通过基极电极和集电极电极之间的区域，从而控制了集电极电流的大小。</p>
-</li>
-<li>
-<p>当基极输入电流或电压较小的变化时，发射极电流也会变化，进而控制集电极电流的大小。</p>
-</li>
-</ol>
-<p>从过程也可以看出，三极管是类似于一种流-流受控源（CCCS），但有以下的几个区别：</p>
-<p>| 特性 | 三极管 | 流-流受控源 |
-|</p>
 ]]></content>
     <category term="硬件设计"/>
     <published>2024-11-21T00:00:00.000Z</published>
