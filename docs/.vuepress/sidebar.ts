@@ -11,16 +11,36 @@ export default sidebar(
     {
       text: "🔡 嵌入式开发",
       icon: "",
-      prefix: "/EmbeddedDevelopment/",
+      prefix: "/",
       collapsible: true,
-      children: "structure",
+      children: [
+        {
+          text: "ESP32",
+          icon: "ion:hardware-chip-outline",
+          link: "EmbeddedDevelopment/ESP32/",
+        },
+        {
+          text: "FreeRTOS",
+          icon: "iconoir:multi-mac-os-window",
+          link: "EmbeddedDevelopment/FreeRTOS/",
+        },
+        {
+          text: "硬件设计",
+          icon: "eos-icons:hardware-circuit",
+          link: "EmbeddedDevelopment/hardWareDesign/",
+        },
+        {
+          text: "C++的嵌入式开发",
+          icon: "vscode-icons:file-type-cpp3",
+          link: "EmbeddedDevelopment/hardWareDesign/2024-11-03-C++嵌入式开发入门.md",
+        },
+      ]
     },
     {
       text: "🔧 NAS、服务器和路由器",
       prefix: "/",
       collapsible: true,
       children: [
-        //"/NASServerRouter/",
         {
           text: "NAS",
           icon: "bi:hdd-network",
