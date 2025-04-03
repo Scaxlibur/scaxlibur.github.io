@@ -162,6 +162,9 @@ export default hopeTheme({
       imgSize: true, // 启用图片大小
       hint: true, // 启用提示容器，默认启用
       alert: true, // 启用 GFM 警告
+      Math: {
+        type: "katex", // 或 'mathjax'
+      },
     },
     markdownImage: {
       // mark: true, // 启用图片标记
@@ -169,9 +172,7 @@ export default hopeTheme({
       size: true, // 启用图片大小
       figure: true, // 启用图片 figure
     },
-    markdownMath: {
-      type: "katex", // 或 'mathjax'
-    },
+
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     /* 
     docsearch: {
@@ -180,10 +181,8 @@ export default hopeTheme({
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     },
     */
-
-
     // 本地搜索，和上方二选一
-    searchPro: {
+    slimsearch: {
       // 索引全部内容
       indexContent: true,
     },
