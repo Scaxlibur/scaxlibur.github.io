@@ -1,6 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { markdownHintPlugin } from '@vuepress/plugin-markdown-hint'
 
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
@@ -144,32 +145,29 @@ export default hopeTheme({
 
     // 禁用不需要的配置
     // https://plugin-md-enhance.vuejs.press/zh/guide/
-    mdEnhance: {
-      sub: true, // 上下角标
-      sup: true,
-      tasklist: true, // 任务列表
-      include: true, //导入文件
-      component: true, // 使用 component 代码块来在 Markdown 中添加组件
-      footnote: true,
-      tabs: true, // 选项卡
-      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
-      mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
+    markdown: {
       align: true, // 启用自定义对齐
-      codetabs: true, // 代码块分组
-      demo: true, //代码演示
-      markmap: true, //思维导图
-      spoiler: true, //剧透
-      hint : true, //提示容器
+      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
+      mark: true, // 使用 == == 进行标记，注意两边需要有空格
+      // spoiler: true, // 使用 !! !! 标记剧透剧透文字，注意两边需要有空格
+      sup: true, // 上下角标
+      sub: true,
+      include: true, // 导入文件
+      footnote: true, // 页脚格式支持
+      tasklist: true, // 启用任务列表格式支持，您可以传递一个对象来配置任务列表
+      component: true, // 使用 component 代码块来在 Markdown 中添加组件，YAML 和 JSON 的数据格式均受支持
+      figure: true, // 启用 figure
+      imgLazyload: true, // 启用图片懒加载
+      // imgMark: true, // 启用图片标记
+      imgSize: true, // 启用图片大小
+      hint: true, // 启用提示容器，默认启用
+      alert: true, // 启用 GFM 警告
     },
     markdownImage: {
       // mark: true, // 启用图片标记
       lazyload: true, // 启用图片懒加载
       size: true, // 启用图片大小
       figure: true, // 启用图片 figure
-    },
-    markdownHint: {
-      alert: true, // GFM 警告
-      hint: true, // 提示容器
     },
     markdownMath: {
       type: "katex", // 或 'mathjax'
