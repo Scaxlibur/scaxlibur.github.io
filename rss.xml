@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 27 Nov 2024 13:35:39 GMT</pubDate>
-    <lastBuildDate>Wed, 27 Nov 2024 13:35:39 GMT</lastBuildDate>
+    <pubDate>Thu, 03 Apr 2025 16:02:15 GMT</pubDate>
+    <lastBuildDate>Thu, 03 Apr 2025 16:02:15 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>硬件设计</category>
@@ -26,19 +26,43 @@
       <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>思维导图</h2>
 <p>不妨试试放大和拖动这张图</p>
-]]></content:encoded>
+<div class="language-markmap line-numbers-mode" data-highlighter="shiki" data-ext="markmap" data-title="markmap" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>## 一、 三极管/场效应管的工作原理</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>三极管，又称晶体管（Transistor），是一种由半导体材料制成的三端器件。其主要由三个区域构成： **发射极**（Emitter）、**基极**（Base）和**集电极**（Collector）。根据材料的掺杂方式，三极管可以分为NPN型和PNP型两种类型。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- 发射极：高掺杂区域，用于发射载流子。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- 基极：极薄且轻掺杂，起到控制载流子流动的作用。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- 集电极：较厚的轻掺杂区域，用于收集发射极发出的载流子。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>三极管的工作主要经过以下几个过程：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. 基极输入电流或电压的变化，通过空间电荷区的扩散和漂移作用，产生电子和空穴对。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>2. 电子和空穴对通过扩散和漂移作用进入集电极和发射极，形成集电极电流和发射极电流。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3. 发射极电流通过基极电极和集电极电极之间的区域，从而控制了集电极电流的大小。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4. 当基极输入电流或电压较小的变化时，发射极电流也会变化，进而控制集电极电流的大小。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>从过程也可以看出，三极管是类似于一种流-流受控源（CCCS），但有以下的几个区别：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>| 特性 | 三极管 | 流-流受控源 |</span></span>
+<span class="line"><span>|</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>OpenWRT软件包推荐</title>
       <link>https://scaxlibur.github.io/NASServerRouter/router/2024-11-10-OpenWRT%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%8E%A8%E8%8D%90.html</link>
       <guid>https://scaxlibur.github.io/NASServerRouter/router/2024-11-10-OpenWRT%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%8E%A8%E8%8D%90.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">OpenWRT软件包推荐</source>
-      <description>Lucky反向代理 luci-app-lucky nginx反向代理的配置对于我这种 菜狗 而言比较困难，幸而有一款简便易用的反向代理服务器。 这个软件包集成了DDNS、反向代理、防火墙管理等等一系列功能，而且是图形化页面，用起来相当方便😋。 SQM QoS luci-app-sqm 所谓QoS，就是Quality of Service的意思，也就是...</description>
+      <description>Lucky反向代理 luci-app-lucky nginx反向代理的配置对于我这种 !!菜狗!! 而言比较困难，幸而有一款简便易用的反向代理服务器。 这个软件包集成了DDNS、反向代理、防火墙管理等等一系列功能，而且是图形化页面，用起来相当方便😋。 SQM QoS luci-app-sqm 所谓QoS，就是Quality of Service的意思...</description>
       <category>软路由</category>
       <pubDate>Sun, 10 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>Lucky反向代理</h2>
 <p><code>luci-app-lucky</code></p>
-<p>nginx反向代理的配置对于我这种 <span class="spoiler" tabindex="-1">菜狗</span> 而言比较困难，幸而有一款简便易用的反向代理服务器。</p>
+<p>nginx反向代理的配置对于我这种 !!菜狗!! 而言比较困难，幸而有一款简便易用的反向代理服务器。</p>
 <p>这个软件包集成了DDNS、反向代理、防火墙管理等等一系列功能，而且是图形化页面，用起来相当方便😋。</p>
 <h2>SQM QoS</h2>
 <p><code>luci-app-sqm</code></p>
@@ -100,11 +124,11 @@
       <link>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</link>
       <guid>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</guid>
       <source url="https://scaxlibur.github.io/rss.xml">黑群晖NAS的硬件配置</source>
-      <description>CPU和主板的选择 一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 哥们你都玩黑群晖了还选啥？ 以下是笔者选择的板U配置： 核显 黑群晖中的核显，主要用于视频的硬解码。...</description>
+      <description>CPU和主板的选择 一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!! 以下是笔者选择的板U配置： 核显 黑群晖中的核显，主要用于视频的...</description>
       <category>NAS</category>
       <pubDate>Thu, 07 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 <span class="spoiler" tabindex="-1">哥们你都玩黑群晖了还选啥？</span></p>
+<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!!</p>
 <p>以下是笔者选择的板U配置：</p>
 <p>|          |          型号         |
 |</p>
@@ -278,13 +302,14 @@
 <h2>写了这么多，应该怎么应用呢？</h2>
 <p>以下是笔者的项目结构，按从功能到实现的顺序画的思维导图：</p>
 <p>（可以拖动，不妨尝试一下）</p>
-]]></content:encoded>
+<div class="language-markmap line-numbers-mode" data-highlighter="shiki" data-ext="markmap" data-title="markmap" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>总线舵机</title>
-      <link>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</link>
-      <guid>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-%E6%80%BB%E7%BA%BF%E8%88%B5%E6%9C%BA.html</guid>
-      <source url="https://scaxlibur.github.io/rss.xml">总线舵机</source>
+      <title>ESP32系列芯片外设-UART通信</title>
+      <link>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-ESP32%E7%B3%BB%E5%88%97%E8%8A%AF%E7%89%87%E5%A4%96%E8%AE%BE-UART%E9%80%9A%E4%BF%A1.html</link>
+      <guid>https://scaxlibur.github.io/EmbeddedDevelopment/ESP32/2024-10-23-ESP32%E7%B3%BB%E5%88%97%E8%8A%AF%E7%89%87%E5%A4%96%E8%AE%BE-UART%E9%80%9A%E4%BF%A1.html</guid>
+      <source url="https://scaxlibur.github.io/rss.xml">ESP32系列芯片外设-UART通信</source>
       <description>前言 总线舵机是一种利用UART总线进行控制的舵机。笔者购买的总线舵机使用单线UART总线，即TX与RX在同一条线上。有的文章指出这样的设计会产生冲突，但笔者猜测如果总线上只有总线舵机，干扰可以通过软件方法解决。 本文基于ESP32-S3，编译环境是ESP-IDF v5.3.1 本文的例子来源于基于ESP32-S3的高安全性宿舍智能门锁设计 正文 UA...</description>
       <category>ESP32</category>
       <category>嵌入式开发</category>
