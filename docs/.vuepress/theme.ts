@@ -112,10 +112,7 @@ export default hopeTheme({
     Math: {
       type: "katex", // 或 'mathjax'
     },
-    markmap: {
-      theme: "default",
-      codeHighlight: true,
-    }, //思维导图
+    markmap: true,
   },
 
   plugins: {
