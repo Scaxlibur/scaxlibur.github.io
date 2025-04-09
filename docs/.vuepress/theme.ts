@@ -2,13 +2,16 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { markdownHintPlugin } from '@vuepress/plugin-markdown-hint'
 
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://scaxlibur.github.io/",
   // 公用 CDN 在部分浏览器中可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
   // https://icon-sets.iconify.design/
-  iconAssets: "iconify",
+  icon: {
+    Assets: "iconify",
+  },
   author: {
     name: "Scaxlibur博客",
     url: "https://scaxlibur.github.io/",
@@ -145,33 +148,33 @@ export default hopeTheme({
 
     // 禁用不需要的配置
     // https://plugin-md-enhance.vuejs.press/zh/guide/
-    mdEnhance: {
-      sub: true, // 上下角标
-      sup: true,
-      tasklist: true, // 任务列表
-      include: true, //导入文件
-      component: true, // 使用 component 代码块来在 Markdown 中添加组件
-      footnote: true,
-      tabs: true, // 选项卡
-      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
-      mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
-      align: true, // 启用自定义对齐
-      codetabs: true, // 代码块分组
-      demo: true, //代码演示
-      markmap: {
-        theme: "default",
-        codeHighlight: true,
-      }, //思维导图
-      spoiler: true, //剧透
-      hint : true, //提示容器
-      alert: true, // GFM 警告
-      imgLazyload: true, // 启用图片懒加载
-      imgSize: true, // 启用图片大小
-      plantuml: true, //时序图
-    },
-    markdownMath: {
-      type: "katex", // 或 'mathjax'
-    },
+    markdownPlugin:({
+      markdown: {
+        align: true, // 启用自定义对齐
+        attrs: true, // 使用特殊标记为 Markdown 元素添加属性
+        mark: true, // 使用 == == 进行标记，注意两边需要有空格
+        spoiler: true, // 使用 !! !! 标记剧透剧透文字，注意两边需要有空格
+        sup: true, // 上下角标
+        sub: true,
+        include: true, // 导入文件
+        footnote: true, // 页脚格式支持
+        tasklist: true, // 启用任务列表格式支持，您可以传递一个对象来配置任务列表
+        component: true, // 使用 component 代码块来在 Markdown 中添加组件，YAML 和 JSON 的数据格式均受支持
+        figure: true, // 启用 figure
+        imgLazyload: true, // 启用图片懒加载
+        // imgMark: true, // 启用图片标记
+        imgSize: true, // 启用图片大小
+        hint: true, // 启用提示容器，默认启用
+        alert: true, // 启用 GFM 警告
+        Math: {
+          type: "katex", // 或 'mathjax'
+        },
+        markmap: {
+          theme: "default",
+          codeHighlight: true,
+        }, //思维导图
+      },
+    }),
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     /* 
     docsearch: {
@@ -180,10 +183,8 @@ export default hopeTheme({
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     },
     */
-
-
     // 本地搜索，和上方二选一
-    searchPro: {
+    slimsearch: {
       // 索引全部内容
       indexContent: true,
     },
