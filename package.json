@@ -14,15 +14,6 @@
     "lint:markdown-fix": "markdownlint docs --fix"
   },
   "dependencies": {
-    "echarts": "latest",
-    "echarts-wordcloud": "latest",
-    "katex": "latest",
-    "markmap-lib": "latest",
-    "markmap-toolbar": "latest",
-    "markmap-view": "latest",
-    "mathjax-full": "latest",
-    "mermaid": "latest",
-    "reveal.js": "latest",
     "@vuepress/bundler-webpack": "2.0.0-rc.20",
     "vue": "^3.5.13",
     "vuepress": "2.0.0-rc.20",
