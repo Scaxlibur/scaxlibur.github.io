@@ -1,4 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
+
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
@@ -157,19 +158,16 @@ export default hopeTheme({
       align: true, // 启用自定义对齐
       codetabs: true, // 代码块分组
       demo: true, //代码演示
-      markmap: true, //思维导图
+      markmap: {
+        theme: "default",
+        codeHighlight: true,
+      }, //思维导图
       spoiler: true, //剧透
       hint : true, //提示容器
-    },
-    markdownImage: {
-      // mark: true, // 启用图片标记
-      lazyload: true, // 启用图片懒加载
-      size: true, // 启用图片大小
-      figure: true, // 启用图片 figure
-    },
-    markdownHint: {
       alert: true, // GFM 警告
-      hint: true, // 提示容器
+      imgLazyload: true, // 启用图片懒加载
+      imgSize: true, // 启用图片大小
+      plantuml: true, //时序图
     },
     markdownMath: {
       type: "katex", // 或 'mathjax'
