@@ -110,7 +110,7 @@ export default hopeTheme({
     hint: true, // 启用提示容器，默认启用
     alert: true, // 启用 GFM 警告
     Math: {
-      type: "katex", // 或 'mathjax'
+      type: "mathjax", // 或 'mathjax'
     },
     markmap: true,
   },
