@@ -6,16 +6,41 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 21 Oct 2025 05:21:48 GMT</pubDate>
-    <lastBuildDate>Tue, 21 Oct 2025 05:21:48 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Oct 2025 06:23:21 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2025 06:23:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>硬件设计</category>
     <category>软路由</category>
+    <category>硬件设计</category>
     <category>NAS</category>
     <category>ESP32</category>
     <category>嵌入式开发</category>
     <category>物联网</category>
+    <item>
+      <title>捡一台小米路由器PRO（R3P）</title>
+      <link>https://scaxlibur.github.io/NASServerRouter/router/2025-10-23-%E6%8D%A1%E4%B8%80%E5%8F%B0%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8PRO%EF%BC%88R3P%EF%BC%89.html</link>
+      <guid>https://scaxlibur.github.io/NASServerRouter/router/2025-10-23-%E6%8D%A1%E4%B8%80%E5%8F%B0%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8PRO%EF%BC%88R3P%EF%BC%89.html</guid>
+      <source url="https://scaxlibur.github.io/rss.xml">捡一台小米路由器PRO（R3P）</source>
+      <description>系统被刷坏了？我来看看 笔者这两天刷闲鱼，偶然看到了一台系统被机主刷坏了的小米路由器PRO，机器30￥，加上运费10￥。卖家自称刷Breed的时候刷错了，目前无法开机也无法进Breed，所以笔者就买来研究一下。 先试试能不能用串口线刷 一般来说，刷成砖了都能用串口救一下。刚好小米路由器的串口焊盘非常友好，所以笔者用烧录夹试了一下。 用烧录夹进行串口写入...</description>
+      <category>软路由</category>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>系统被刷坏了？我来看看</h2>
+<p>笔者这两天刷闲鱼，偶然看到了一台系统被机主刷坏了的小米路由器PRO，机器30￥，加上运费10￥。卖家自称刷Breed的时候刷错了，目前无法开机也无法进Breed，所以笔者就买来研究一下。</p>
+<h2>先试试能不能用串口线刷</h2>
+<p>一般来说，刷成砖了都能用串口救一下。刚好小米路由器的串口焊盘非常友好，所以笔者用烧录夹试了一下。</p>
+<figure><figcaption>用烧录夹进行串口写入</figcaption></figure>
+<p>用Xshell连上后很遗憾，串口完全没有任何输出，这下只能把Flash干下来用编程器搞一搞了。</p>
+<h2>Flash编程器太贵？还有SPI焊盘呢！</h2>
+<p>淘宝转了一圈，发现烧写NAND Flash的编程器太贵了，怎么也是70-80￥。既然都是捡垃圾了，花这些钱也没什么意义。幸而笔者又在网上看到一个<a href="https://www.right.com.cn/forum/thread-355307-1-1.html" target="_blank" rel="noopener noreferrer">NAND Flash改SPI Flash的教程</a>，这下就不得不试了。</p>
+<p>但首先需要把原来的Flash干下来。为了避免把电阻和背面的元件吹飞，笔者特地用了一些高温胶带保护旁边的原件。</p>
+<figure><figcaption>干Flash之前</figcaption></figure>
+<p>Flash干下来之后就是这样。为了使用SPI Flash，旁边几个识别电阻也需要换位置。位号如图，直接就是一坨锡。幸好笔者留了个心眼，电阻干下来之后测了一下电阻阻值，发现居然不是0欧电阻，而是4.7k，推测可能是上拉或者是下拉电阻。没办法，只能从电阻本里取两个出来重新安上，否则没办法实现上拉下拉。</p>
+<figure><figcaption>干Flash之后</figcaption></figure>
+<p>还好这几个电阻的封装是0402的，要是0201的我就没办法了。</p>
+<h2>未完待续</h2>
+<p>现在就是坐等SPI芯片寄过来，未完待续！</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>三极管和场效应管</title>
       <link>https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html</link>
