@@ -1,5 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { markdownMathjaxPlugin } from "@vuepress/plugin-markdown-mathjax";
+import { markdownMathPlugin } from "@vuepress/plugin-markdown-math";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
@@ -118,7 +118,7 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-    markdownMathjaxPlugin(),
+    markdownMathPlugin(),
 
     // 评论配置（仅做样例，记得更换）
     comment: {
