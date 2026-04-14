@@ -18,7 +18,6 @@
     "@vuepress/plugin-docsearch": "2.0.0-rc.112",
     "@vuepress/plugin-feed": "2.0.0-rc.112",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
-    "@vuepress/plugin-markdown-math": "2.0.0-rc.112",
     "@vuepress/plugin-slimsearch": "2.0.0-rc.112",
     "@waline/client": "^3.6.0",
     "cpx2": "^8.0.0",
@@ -38,6 +37,10 @@
     "vuepress-theme-hope": "2.0.0-rc.94"
   },
   "pnpm": {
+    "overrides": {
+      "baseline-browser-mapping": "2.10.18",
+      "caniuse-lite": "1.0.30001788"
+    },
     "onlyBuiltDependencies": [
       "esbuild"
     ]
