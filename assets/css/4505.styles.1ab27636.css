@@ -1,0 +1,152 @@
+.slimsearch-result-wrapper {
+  scrollbar-color: var(--vp-c-accent) var(--vp-c-border);
+  scrollbar-width: thin;
+}
+
+@media (max-width: 419px) {
+  .slimsearch-result-wrapper {
+    font-size: 14px;
+  }
+}
+
+.slimsearch-result-wrapper::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.slimsearch-result-wrapper::-webkit-scrollbar-track-piece {
+  background: #0000001a;
+  border-radius: 6px;
+}
+
+.slimsearch-result-wrapper::-webkit-scrollbar-thumb {
+  background: var(--vp-c-accent-bg);
+  border-radius: 6px;
+}
+
+.slimsearch-result-wrapper::-webkit-scrollbar-thumb:active {
+  background: var(--vp-c-accent-hover);
+}
+
+.slimsearch-result-wrapper mark {
+  border-radius: .25em;
+  line-height: 1;
+}
+
+.slimsearch-records {
+  margin: 0;
+  padding: 0;
+}
+
+.slimsearch-record {
+  display: block;
+}
+
+li.slimsearch-record {
+  list-style: none;
+}
+
+.slimsearch-record-title {
+  z-index: 10;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-accent);
+  text-indent: .5em;
+  margin: -4px -4px .25rem;
+  padding: 4px;
+  font-size: .875em;
+  font-weight: 600;
+  line-height: 2rem;
+  position: sticky;
+  top: -2px;
+}
+
+.slimsearch-record-matches.active .slimsearch-record-title {
+  color: var(--vp-c-accent);
+}
+
+.slimsearch-record-contents {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slimsearch-record-matches {
+  background: var(--vp-c-bg-alt);
+  color: inherit;
+  box-shadow: 0 1px 3px 0 var(--vp-c-shadow);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border-radius: .25rem;
+  margin: .5rem 0;
+  padding: .5rem .75rem;
+  font-weight: normal;
+}
+
+.slimsearch-record-matches > * {
+  align-items: center;
+  display: flex;
+}
+
+.slimsearch-record-matches a {
+  color: inherit;
+}
+
+.slimsearch-record-matches strong {
+  color: var(--vp-c-accent);
+}
+
+.slimsearch-record-matches:hover, .slimsearch-record-matches.active {
+  background-color: var(--vp-c-accent-hover);
+  color: var(--vp-c-white);
+  cursor: pointer;
+}
+
+.slimsearch-record-matches:hover .slimsearch-record-type, .slimsearch-record-matches:hover .slimsearch-remove-icon, .slimsearch-record-matches:hover strong, .slimsearch-record-matches.active .slimsearch-record-type, .slimsearch-record-matches.active .slimsearch-remove-icon, .slimsearch-record-matches.active strong {
+  color: var(--vp-c-white);
+}
+
+.slimsearch-record-content {
+  flex-flow: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: stretch;
+  line-height: 1.5;
+  display: flex;
+}
+
+.slimsearch-record-type {
+  width: 1rem;
+  height: 1rem;
+  color: var(--vp-c-accent);
+  margin-inline-start: -.5rem;
+  padding: .5rem;
+  display: block;
+}
+
+.slimsearch-remove-icon {
+  box-sizing: content-box;
+  height: 1.5rem;
+  color: var(--vp-c-accent);
+  cursor: pointer;
+  background: none;
+  border-width: 0;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.slimsearch-remove-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.slimsearch-remove-icon:hover {
+  background: #8080804d;
+}
+
+.slimsearch-record-content-header {
+  border-bottom: 1px solid var(--vp-c-border-hard);
+  margin-bottom: .25rem;
+  font-size: .9em;
+}
+
