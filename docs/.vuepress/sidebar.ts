@@ -25,11 +25,6 @@ export default sidebar(
           link: "EmbeddedDevelopment/FreeRTOS/",
         },
         {
-          text: "硬件设计",
-          icon: "eos-icons:hardware-circuit",
-          link: "EmbeddedDevelopment/hardWareDesign/",
-        },
-        {
           text: "C++的嵌入式开发",
           icon: "vscode-icons:file-type-cpp3",
           link: "EmbeddedDevelopment/2024-11-03-C++嵌入式开发入门.md",
@@ -59,13 +54,6 @@ export default sidebar(
           link: "NASServerRouter/router/",
         },
       ]
-    },
-    {
-      text: "🤡 杂七杂八",
-      icon: "",
-      prefix: "/whatever/",
-      collapsible: true,
-      children: "structure",
     },
     {
       text: "🗒️ 博客文章",
