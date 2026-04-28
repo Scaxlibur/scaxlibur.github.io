@@ -6,8 +6,8 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 28 Apr 2026 09:10:29 GMT</pubDate>
-    <lastBuildDate>Tue, 28 Apr 2026 09:10:29 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Apr 2026 09:50:39 GMT</pubDate>
+    <lastBuildDate>Tue, 28 Apr 2026 09:50:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
@@ -15,6 +15,203 @@
     <category>ESP32</category>
     <category>嵌入式开发</category>
     <category>物联网</category>
+    <item>
+      <title>用 chisel 搭建 WSS 反向 SSH 隧道</title>
+      <link>https://scaxlibur.github.io/NASServerRouter/router/2026-04-28-%E7%94%A8chisel%E6%90%AD%E5%BB%BAWSS%E5%8F%8D%E5%90%91SSH%E9%9A%A7%E9%81%93.html</link>
+      <guid>https://scaxlibur.github.io/NASServerRouter/router/2026-04-28-%E7%94%A8chisel%E6%90%AD%E5%BB%BAWSS%E5%8F%8D%E5%90%91SSH%E9%9A%A7%E9%81%93.html</guid>
+      <source url="https://scaxlibur.github.io/rss.xml">用 chisel 搭建 WSS 反向 SSH 隧道</source>
+      <description>为什么需要反向 SSH 隧道？ 家用网络里经常会遇到一个问题：我想从外面连回家里的机器，但家里的机器不一定有公网 IP，运营商 NAT、校园网、公司网络策略都可能挡在中间。 常见方案有很多，比如内网穿透、Tailscale、ZeroTier、frp。它们都很好用，但有时也会遇到链路抖动、虚拟网卡不稳定、节点之间偶尔连不上的情况。 这时可以换一个思路：让...</description>
+      <category>软路由</category>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>为什么需要反向 SSH 隧道？</h2>
+<p>家用网络里经常会遇到一个问题：我想从外面连回家里的机器，但家里的机器不一定有公网 IP，运营商 NAT、校园网、公司网络策略都可能挡在中间。</p>
+<p>常见方案有很多，比如内网穿透、Tailscale、ZeroTier、frp。它们都很好用，但有时也会遇到链路抖动、虚拟网卡不稳定、节点之间偶尔连不上的情况。</p>
+<p>这时可以换一个思路：让家里的机器主动连出到一个公网入口，再把 SSH 端口反向映射回来。</p>
+<p>这就是本文要记录的方案：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>内网机器 ──主动连出──&gt; 公网入口 ──反向端口──&gt; 本地 SSH 出口</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>工具使用 <a href="https://github.com/jpillora/chisel" target="_blank" rel="noopener noreferrer">chisel</a>。它是一个基于 HTTP/WebSocket 的 TCP/UDP 隧道工具，部署简单，适合做轻量级反向 SSH 隧道。</p>
+<h2>目标架构</h2>
+<p>本文使用的架构如下。所有域名、端口和用户名都用示例值表示，请按自己的环境替换。</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>内网 Windows / Linux 主机</span></span>
+<span class="line"><span>  └─ chisel client 主动连出</span></span>
+<span class="line"><span>      ↓ HTTPS / WebSocket</span></span>
+<span class="line"><span>公网入口：https://tunnel.example.com</span></span>
+<span class="line"><span>      ↓ Nginx / 反向代理</span></span>
+<span class="line"><span>公网服务器或家用网关</span></span>
+<span class="line"><span>      ↓ HTTP WebSocket upstream</span></span>
+<span class="line"><span>NAS / Linux 服务器：127.0.0.1:39001</span></span>
+<span class="line"><span>  └─ chisel server</span></span>
+<span class="line"><span>      ↓ reverse port</span></span>
+<span class="line"><span>NAS / Linux 本机：127.0.0.1:2222</span></span>
+<span class="line"><span>      ↓ SSH</span></span>
+<span class="line"><span>内网主机：127.0.0.1:22</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个方案的重点是：</p>
+<ul>
+<li>内网主机主动连出，不需要内网主机暴露公网端口。</li>
+<li>公网入口只负责转发 WebSocket。</li>
+<li>真正的 SSH 出口只绑定在服务器本机 <code>127.0.0.1</code>，不直接暴露到公网。</li>
+</ul>
+<h2>服务端：用 Docker 跑 chisel server</h2>
+<p>服务端可以放在公网服务器，也可以放在家里 NAS 上，再由网关或反向代理转发进来。</p>
+<p>示例 <code>docker-compose.yml</code>：</p>
+<div class="language-yaml line-numbers-mode" data-highlighter="shiki" data-ext="yaml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-yaml"><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">services</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">  chisel</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    image</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">jpillora/chisel:latest</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    container_name</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">chisel-wss</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    restart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">unless-stopped</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    command</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">server</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">--reverse</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">--auth</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">${CHISEL_AUTH}</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">--port</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"8080"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    ports</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      # 给反向代理访问的 WebSocket 后端</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"127.0.0.1:39001:8080"</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      # 反向 SSH 出口，只给本机使用</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      - </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"127.0.0.1:2222:2222"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>.env</code>：</p>
+<div class="language-env line-numbers-mode" data-highlighter="shiki" data-ext="env" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-env"><span class="line"><span>CHISEL_AUTH=user:change-this-password</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>启动：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> up</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -d</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> logs</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --tail</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 50</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> chisel</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>正常情况下，日志里会看到类似内容：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>server: Reverse tunnelling enabled</span></span>
+<span class="line"><span>server: User authentication enabled</span></span>
+<span class="line"><span>server: Listening on http://0.0.0.0:8080</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>反向代理：把 HTTPS 转到 chisel server</h2>
+<p>chisel 可以直接跑 HTTP/WebSocket，但公开访问时建议放在 HTTPS 后面。下面是一个 Nginx 示例：</p>
+<div class="language-nginx line-numbers-mode" data-highlighter="shiki" data-ext="nginx" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-nginx"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">server</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    listen </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">443</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> ssl http2;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    server_name </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">tunnel.example.com;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    ssl_certificate </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    /path/to/fullchain.pem;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    ssl_certificate_key </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/path/to/privkey.pem;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    location</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> / {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_pass </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">http://127.0.0.1:39001;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_http_version </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_set_header </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Upgrade $</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">http_upgrade</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_set_header </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Connection </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"upgrade"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_set_header </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Host $</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">host</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_read_timeout </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">86400s</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        proxy_send_timeout </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">86400s</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你使用的是 Lucky、Nginx Proxy Manager 或其他图形化反代工具，关键点也一样：</p>
+<ul>
+<li>upstream 指向 chisel server 的 HTTP 端口。</li>
+<li>开启 WebSocket 转发。</li>
+<li>不要忘记较长的超时时间。</li>
+</ul>
+<h2>客户端：主动连接公网入口</h2>
+<p>内网机器上运行 chisel client：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">chisel</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> client</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  --auth</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user:change-this-password</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  https://tunnel.example.com</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> \</span></span>
+<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">  R:0.0.0.0:2222:127.0.0.1:22</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>含义是：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>R:0.0.0.0:2222:127.0.0.1:22</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>让服务端监听反向端口 <code>2222</code>，并把流量转发到客户端本机的 <code>127.0.0.1:22</code>。</p>
+<p>如果你只在服务端 Docker 里把 <code>2222</code> 映射到宿主机 <code>127.0.0.1:2222</code>，那最终 SSH 仍然只对服务器本机开放。</p>
+<p>连接测试：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2222</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user@127.0.0.1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>如果你需要密钥登录，也可以写成：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -i</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ~/.ssh/example_key</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2222</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user@127.0.0.1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>Windows 上作为服务常驻</h2>
+<p>Windows 上可以用任务计划，也可以用 NSSM 把 chisel client 包成服务。相比任务计划，NSSM 的可维护性更好一些。</p>
+<p>示例目录：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>C:\Tools\chisel\</span></span>
+<span class="line"><span>├── chisel.exe</span></span>
+<span class="line"><span>├── chisel-auth.txt</span></span>
+<span class="line"><span>├── start-chisel.ps1</span></span>
+<span class="line"><span>└── chisel.log</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>start-chisel.ps1</code> 示例：</p>
+<div class="language-powershell line-numbers-mode" data-highlighter="shiki" data-ext="powershell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-powershell"><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$BaseDir</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Tools\chisel"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$Chisel</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Join-Path</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $BaseDir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "chisel.exe"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$AuthFile</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Join-Path</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $BaseDir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "chisel-auth.txt"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$LogFile</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Join-Path</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $BaseDir</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "chisel.log"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$Server</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "https://tunnel.example.com"</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$Remote</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "R:0.0.0.0:2222:127.0.0.1:22"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">while</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">$true</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    $Auth</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Get-Content</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $AuthFile</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Raw</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    $Auth</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $Auth.Trim</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    $Time</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Get-Date</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Format </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"yyyy-MM-dd HH:mm:ss"</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">    Add-Content</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $LogFile</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "[</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">$</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Time</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">] starting chisel client"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &amp; </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$Chisel</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> client </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">--</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">auth </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$Auth</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $Server</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $Remote</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> *</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;&gt; </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">$LogFile</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    $Time</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> Get-Date</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Format </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"yyyy-MM-dd HH:mm:ss"</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">    Add-Content</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> $LogFile</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "[</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">$</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Time</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">] chisel exited, restart after 5s"</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">    Start-Sleep</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">Seconds </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">5</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>NSSM 配置时可以这样填：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>Application: powershell.exe</span></span>
+<span class="line"><span>Arguments: -NoProfile -ExecutionPolicy Bypass -File C:\Tools\chisel\start-chisel.ps1</span></span>
+<span class="line"><span>Startup directory: C:\Tools\chisel</span></span>
+<span class="line"><span>Startup type: Automatic</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>认证文件 <code>chisel-auth.txt</code> 需要限制权限，不要放在公开目录里。</p>
+<h2>常见坑</h2>
+<h3>1. 客户端地址写 <code>https://</code>，不要写 <code>wss://</code></h3>
+<p>chisel client 的 URL 建议写：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">https://tunnel.example.com</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>它会在内部升级到 WebSocket。直接写 <code>wss://...</code> 在某些版本里可能被解析坏，出现奇怪的地址错误。</p>
+<h3>2. chisel server 不一定支持 <code>--basepath</code></h3>
+<p>有些教程会写：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>--basepath /chisel</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>但不是所有版本都支持这个参数。如果容器反复重启，日志里出现：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>flag provided but not defined: -basepath</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>就说明当前版本不支持。最简单的做法是：不要挂子路径，直接把域名根路径反代给 chisel server。</p>
+<h3>3. 浏览器 404 不代表坏了</h3>
+<p>chisel 不是普通网页服务。你用浏览器打开 <code>https://tunnel.example.com</code>，看到 404 或空白，并不一定代表隧道失败。</p>
+<p>更可靠的检查方式是：</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ps</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">docker</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> compose</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> logs</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --tail</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 50</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> chisel</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ssh</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -p</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2222</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> user@127.0.0.1</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>4. 不要把 SSH 出口暴露到公网</h3>
+<p>建议把反向 SSH 出口绑定在服务端本机：</p>
+<div class="language-yaml line-numbers-mode" data-highlighter="shiki" data-ext="yaml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-yaml"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">- </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"127.0.0.1:2222:2222"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>不要写成：</p>
+<div class="language-yaml line-numbers-mode" data-highlighter="shiki" data-ext="yaml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-yaml"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">- </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"0.0.0.0:2222:2222"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>后者会让 SSH 出口直接暴露到公网，风险会高很多。</p>
+<h3>5. 多台机器可以分不同端口</h3>
+<p>如果有多台内网机器，可以这样规划：</p>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-text"><span class="line"><span>127.0.0.1:2222 -&gt; host-a:22</span></span>
+<span class="line"><span>127.0.0.1:2223 -&gt; host-b:22</span></span>
+<span class="line"><span>127.0.0.1:2224 -&gt; host-c:22</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>每台客户端使用不同的 <code>R:</code> 端口即可。</p>
+<h2>安全建议</h2>
+<ul>
+<li>使用强密码作为 chisel auth，必要时定期轮换。</li>
+<li>SSH 禁止密码登录，优先使用密钥。</li>
+<li>反向 SSH 出口只绑定 <code>127.0.0.1</code>。</li>
+<li>如果反代入口在内网网关后面，尽量限制来源 IP。</li>
+</ul>
+<h2>适合什么场景？</h2>
+<p>这个方案适合：</p>
+<ul>
+<li>虚拟组网偶尔不稳定，需要备用 SSH 通道。</li>
+<li>想用 HTTPS/WebSocket 穿过一些普通网络环境。</li>
+<li>只需要少量固定端口，不需要完整 Tailnet。</li>
+</ul>
+<p>它不适合：</p>
+<ul>
+<li>大规模组网。</li>
+<li>需要复杂 ACL / 设备身份管理。</li>
+<li>对审计、权限和密钥轮换有严格企业级要求的场景。</li>
+</ul>
+<p>如果只是给自己的几台机器留一个应急 SSH 通道，chisel 已经足够轻量。</p>
+<h2>总结</h2>
+<p>chisel 反向 SSH 隧道的核心思路很简单：让内网主机主动连出，把 SSH 端口反向挂到一台可访问的服务器上。</p>
+<p>真正需要注意的不是命令本身，而是边界：公网入口只负责 WebSocket，SSH 出口只给本机使用，认证信息不要泄露。</p>
+<p>这样，它就可以成为 ZeroTier、Tailscale 或普通内网穿透之外的一条备用通道。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>捡一台小米路由器PRO（R3P）</title>
       <link>https://scaxlibur.github.io/NASServerRouter/router/2025-10-23-%E6%8D%A1%E4%B8%80%E5%8F%B0%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8PRO%EF%BC%88R3P%EF%BC%89.html</link>
