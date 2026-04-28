@@ -32,7 +32,7 @@ export default sidebar(
         {
           text: "C++的嵌入式开发",
           icon: "vscode-icons:file-type-cpp3",
-          link: "EmbeddedDevelopment/hardWareDesign/2024-11-03-C++嵌入式开发入门.md",
+          link: "EmbeddedDevelopment/2024-11-03-C++嵌入式开发入门.md",
         },
       ]
     },
