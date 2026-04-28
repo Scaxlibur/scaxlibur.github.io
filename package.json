@@ -24,11 +24,10 @@
     "@waline/client": "^3.13.0",
     "dashjs": "^4.7.4",
     "hls.js": "^1.6.13",
-    "markdownlint-cli": "^0.45.0",
+    "markdownlint-cli": "^0.48.0",
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.12",
     "markmap-view": "^0.18.12",
-    "mathjax-full": "^3.2.2",
     "mpegts.js": "1.8.0",
     "prettier": "^3.6.2",
     "sass-embedded": "^1.99.0",
@@ -41,7 +40,11 @@
   "pnpm": {
     "overrides": {
       "baseline-browser-mapping": "2.10.23",
-      "caniuse-lite": "1.0.30001791"
+      "caniuse-lite": "1.0.30001791",
+      "undici": "6.24.0",
+      "@xmldom/xmldom": "0.9.10",
+      "yaml": "2.8.3",
+      "markdown-it": "14.1.1"
     },
     "onlyBuiltDependencies": [
       "esbuild"
