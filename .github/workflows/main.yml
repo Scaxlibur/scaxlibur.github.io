@@ -42,7 +42,8 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          pnpm cpx "docs/reading/**" docs/.vuepress/public/reading
+          mkdir -p docs/.vuepress/public/reading
+          cp -R docs/reading/. docs/.vuepress/public/reading/
           pnpm run docs:build
           > docs/.vuepress/dist/.nojekyll
 
