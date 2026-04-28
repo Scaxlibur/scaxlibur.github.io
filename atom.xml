@@ -4,7 +4,7 @@
   <title>Scaxlibur 博客</title>
   <subtitle>一些学习随笔，偶尔分享生活</subtitle>
   <icon>https://scaxlibur.github.io/favicon.ico</icon>
-  <updated>2026-04-27T13:51:23.290Z</updated>
+  <updated>2026-04-28T05:18:36.930Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://scaxlibur.github.io/atom.xml"/>
   <link rel="alternate" href="https://scaxlibur.github.io/"/>
@@ -18,7 +18,7 @@
     <title type="text">捡一台小米路由器PRO（R3P）</title>
     <id>https://scaxlibur.github.io/NASServerRouter/router/2025-10-23-%E6%8D%A1%E4%B8%80%E5%8F%B0%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8PRO%EF%BC%88R3P%EF%BC%89.html</id>
     <link href="https://scaxlibur.github.io/NASServerRouter/router/2025-10-23-%E6%8D%A1%E4%B8%80%E5%8F%B0%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8PRO%EF%BC%88R3P%EF%BC%89.html"/>
-    <updated>2025-10-23T06:21:14.000Z</updated>
+    <updated>2026-04-28T05:03:09.000Z</updated>
     <summary type="html"><![CDATA[<h2>系统被刷坏了？我来看看</h2>
 <p>笔者这两天刷闲鱼，偶然看到了一台系统被机主刷坏了的小米路由器PRO，机器30￥，加上运费10￥。卖家自称刷Breed的时候刷错了，目前无法开机也无法进Breed，所以笔者就买来研究一下。</p>
 <h2>先试试能不能用串口线刷</h2>
@@ -31,7 +31,7 @@
 <p>一般来说，刷成砖了都能用串口救一下。刚好小米路由器的串口焊盘非常友好，所以笔者用烧录夹试了一下。</p>
 <figure><figcaption>用烧录夹进行串口写入</figcaption></figure>
 <p>用Xshell连上后很遗憾，串口完全没有任何输出，这下只能把Flash干下来用编程器搞一搞了。</p>
-<h2>Flash编程器太贵？还有SPI焊盘呢！</h2>
+<h2>Flash编程器太贵？还有SPI焊盘呢</h2>
 <p>淘宝转了一圈，发现烧写NAND Flash的编程器太贵了，怎么也是70-80￥。既然都是捡垃圾了，花这些钱也没什么意义。幸而笔者又在网上看到一个<a href="https://www.right.com.cn/forum/thread-355307-1-1.html" target="_blank" rel="noopener noreferrer">NAND Flash改SPI Flash的教程</a>，这下就不得不试了。</p>
 <p>但首先需要把原来的Flash干下来。为了避免把电阻和背面的元件吹飞，笔者特地用了一些高温胶带保护旁边的原件。</p>
 <figure><figcaption>干Flash之前</figcaption></figure>
@@ -69,6 +69,69 @@
 ]]></content>
     <category term="硬件设计"/>
     <published>2024-11-21T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">黑群晖NAS的硬件配置</title>
+    <id>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</id>
+    <link href="https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html"/>
+    <updated>2026-04-28T05:03:09.000Z</updated>
+    <summary type="html"><![CDATA[<h2>CPU和主板的选择</h2>
+<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!!</p>
+<p>以下是笔者选择的板U配置：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>intel N5105</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>DDR4 最大64G</td>
+</tr>
+<tr>
+<td>网卡</td>
+<td>4个Intel i225 2.5G网卡</td>
+</tr>
+<tr>
+<td>SATA</td>
+<td>6个SATA3.0接口</td>
+</tr>
+<tr>
+<td>M.2</td>
+<td>2个</td>
+</tr>
+<tr>
+<td>外部USB接口</td>
+<td>2个USB3.0，2个USB2.0</td>
+</tr>
+<tr>
+<td>内部USB接口</td>
+<td>4个USB2.0</td>
+</tr>
+<tr>
+<td>尺寸</td>
+<td>标准ITX</td>
+</tr>
+<tr>
+<td>散热器</td>
+<td>自带一个丐版风冷</td>
+</tr>
+</tbody>
+</table>]]></summary>
+    <content type="html"><![CDATA[<h2>CPU和主板的选择</h2>
+<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!!</p>
+<p>以下是笔者选择的板U配置：</p>
+<p>|          |          型号         |
+|</p>
+]]></content>
+    <category term="NAS"/>
+    <published>2024-11-12T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">OpenWRT软件包推荐</title>
@@ -145,69 +208,6 @@
 <p><a href="https://registry.hub.docker.com/r/linuxserver/heimdall/" target="_blank" rel="noopener noreferrer">linuxserver/heimdall</a></p>
 <p>所谓个人导航，就是个人搭建的一种网络导航，有点像2345导航之类的，但放的全是自己的网站（当然也可以放其他网站，只是笔者需要整理自己折腾出来的东西）。</p>
 <p>简而言之，就是一个自己可以定制的导航主页。</p>
-]]></content>
-    <category term="NAS"/>
-    <published>2024-11-07T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">黑群晖NAS的硬件配置</title>
-    <id>https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html</id>
-    <link href="https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html"/>
-    <updated>2024-11-12T12:33:51.000Z</updated>
-    <summary type="html"><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!!</p>
-<p>以下是笔者选择的板U配置：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>型号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CPU</td>
-<td>intel N5105</td>
-</tr>
-<tr>
-<td>内存</td>
-<td>DDR4 最大64G</td>
-</tr>
-<tr>
-<td>网卡</td>
-<td>4个Intel i225 2.5G网卡</td>
-</tr>
-<tr>
-<td>SATA</td>
-<td>6个SATA3.0接口</td>
-</tr>
-<tr>
-<td>M.2</td>
-<td>2个</td>
-</tr>
-<tr>
-<td>外部USB接口</td>
-<td>2个USB3.0，2个USB2.0</td>
-</tr>
-<tr>
-<td>内部USB接口</td>
-<td>4个USB2.0</td>
-</tr>
-<tr>
-<td>尺寸</td>
-<td>标准ITX</td>
-</tr>
-<tr>
-<td>散热器</td>
-<td>自带一个丐版风冷</td>
-</tr>
-</tbody>
-</table>]]></summary>
-    <content type="html"><![CDATA[<h2>CPU和主板的选择</h2>
-<p>一般而言，笔者这种穷哥们上黑群晖都是为了便宜，所以这里就推荐性能普通的板U套装。这种板U套装和DIY装机所说的板U套装有所不同。NAS尤其是黑群晖常见的板U套装，CPU都是直接焊接在主板上的。这样一来，板U套装选择的局限性就比较大。 !!哥们你都玩黑群晖了还选啥？!!</p>
-<p>以下是笔者选择的板U配置：</p>
-<p>|          |          型号         |
-|</p>
 ]]></content>
     <category term="NAS"/>
     <published>2024-11-07T00:00:00.000Z</published>
