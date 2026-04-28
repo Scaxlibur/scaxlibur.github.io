@@ -20,19 +20,6 @@
       ]
     },
     {
-      "title": "三极管和场效应管",
-      "url": "https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html",
-      "id": "https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html",
-      "summary": "思维导图 不妨试试放大和拖动这张图 一、 三极管/场效应管的工作原理 三极管，又称晶体管（Transistor），是一种由半导体材料制成的三端器件。其主要由三个区域构成： 发射极（Emitter）、基极（Base）和集电极（Collector）。根据材料的掺杂方式，三极管可以分为NPN型和PNP型两种类型。 发射极：高掺杂区域，用于发射载流子。 基极：...",
-      "content_html": "<h2>思维导图</h2>\n<p>不妨试试放大和拖动这张图</p>\n",
-      "date_published": "2024-11-21T00:00:00.000Z",
-      "date_modified": "2024-11-22T12:42:41.000Z",
-      "authors": [],
-      "tags": [
-        "硬件设计"
-      ]
-    },
-    {
       "title": "黑群晖NAS的硬件配置",
       "url": "https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html",
       "id": "https://scaxlibur.github.io/NASServerRouter/NAS/2024-11-12-%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%9A%84%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE.html",

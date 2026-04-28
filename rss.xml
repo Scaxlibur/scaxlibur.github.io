@@ -6,12 +6,11 @@
     <link>https://scaxlibur.github.io/</link>
     <description>一些学习随笔，偶尔分享生活</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 28 Apr 2026 05:57:54 GMT</pubDate>
-    <lastBuildDate>Tue, 28 Apr 2026 05:57:54 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Apr 2026 09:10:29 GMT</pubDate>
+    <lastBuildDate>Tue, 28 Apr 2026 09:10:29 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>软路由</category>
-    <category>硬件设计</category>
     <category>NAS</category>
     <category>ESP32</category>
     <category>嵌入式开发</category>
@@ -39,18 +38,6 @@
 <p>还好这几个电阻的封装是0402的，要是0201的我就没办法了。</p>
 <h2>未完待续</h2>
 <p>现在就是坐等SPI芯片寄过来，未完待续！</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>三极管和场效应管</title>
-      <link>https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html</link>
-      <guid>https://scaxlibur.github.io/EmbeddedDevelopment/hardWareDesign/2024-11-21-%E4%B8%89%E6%9E%81%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1.html</guid>
-      <source url="https://scaxlibur.github.io/rss.xml">三极管和场效应管</source>
-      <description>思维导图 不妨试试放大和拖动这张图 一、 三极管/场效应管的工作原理 三极管，又称晶体管（Transistor），是一种由半导体材料制成的三端器件。其主要由三个区域构成： 发射极（Emitter）、基极（Base）和集电极（Collector）。根据材料的掺杂方式，三极管可以分为NPN型和PNP型两种类型。 发射极：高掺杂区域，用于发射载流子。 基极：...</description>
-      <category>硬件设计</category>
-      <pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>思维导图</h2>
-<p>不妨试试放大和拖动这张图</p>
 ]]></content:encoded>
     </item>
     <item>
