@@ -153,7 +153,6 @@ export default hopeTheme({
         },
       },
       */
-
       // Giscus
       //provider: "Giscus",
       //repo: "rockbenben/giscus-comment",
