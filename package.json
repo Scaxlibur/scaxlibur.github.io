@@ -39,7 +39,18 @@
   "pnpm": {
     "overrides": {
       "baseline-browser-mapping": "2.10.18",
-      "caniuse-lite": "1.0.30001788"
+      "caniuse-lite": "1.0.30001788",
+      "undici": "6.24.0",
+      "@xmldom/xmldom": "0.9.10",
+      "yaml": "2.8.3",
+      "markdown-it": "14.1.1",
+      "glob": "11.1.0",
+      "minimatch": "10.2.3",
+      "@isaacs/brace-expansion": "5.0.1",
+      "smol-toml": "1.6.1",
+      "mdast-util-to-hast": "13.2.1",
+      "picomatch@<3": "2.3.2",
+      "picomatch@>=4 <5": "4.0.4"
     },
     "onlyBuiltDependencies": [
       "esbuild"
