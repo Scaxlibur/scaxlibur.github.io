@@ -81,7 +81,7 @@ services:
 
 `.env`：
 
-```env
+```dotenv
 CHISEL_AUTH=user:change-this-password
 ```
 
