@@ -28,6 +28,11 @@ export default sidebar({
           link: "EmbeddedDevelopment/FreeRTOS/",
         },
         {
+          text: "STM32",
+          icon: "ion:hardware-chip-outline",
+          link: "EmbeddedDevelopment/STM32/",
+        },
+        {
           text: "C++的嵌入式开发",
           icon: "vscode-icons:file-type-cpp3",
           link: "EmbeddedDevelopment/2024-11-03-C++嵌入式开发入门.md",
